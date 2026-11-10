@@ -4,6 +4,10 @@
 
 A visual, practical handbook for understanding AI from first principles. Each lesson combines plain-language explanations, diagrams, worked examples, Python labs, project evidence and interview preparation.
 
+![AI data modalities](assets/data-modalities.svg)
+
+*The handbook starts with the data itself, then follows how different modalities are represented and processed by AI systems.*
+
 ## Explore the handbook
 
 | Module | What you will learn | Start here |
