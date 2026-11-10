@@ -1,32 +1,40 @@
 # Project-to-Topic Mapping
 
-This index helps answer: "Which project demonstrates this concept?" A project is marked verified only after its source code or test evidence is inspected.
+This map links handbook concepts to implementation evidence. Code presence is not a claim that the experiment was independently rerun here.
 
-## Status key
-- **Verified:** implementation evidence checked and linked.
-- **To verify:** likely relevant, but exact implementation has not yet been inspected.
-- **Conceptual:** studied, but no project implementation is claimed.
-- **N/A:** not relevant to the project.
+## Tiny LLM / Jetson project
 
-| Topic / technology | Tiny LLM | RAG application | VLM experiments | Telugu voice assistant | EV AI application |
-|---|---|---|---|---|---|
-| Python | To verify | To verify | To verify | To verify | To verify |
-| PyTorch | To verify | N/A | To verify | To verify | To verify |
-| Tokenization | To verify | To verify | To verify | To verify | To verify |
-| Embeddings | To verify | To verify | To verify | To verify | To verify |
-| Attention / Transformers | To verify | To verify | To verify | To verify | To verify |
-| Model training | To verify | N/A | To verify | To verify | To verify |
-| Model inference | To verify | To verify | To verify | To verify | To verify |
-| Image preprocessing | N/A | To verify | To verify | N/A | To verify |
-| Speech-to-text | N/A | N/A | N/A | To verify | To verify |
-| Text-to-speech | N/A | N/A | N/A | To verify | To verify |
-| FastAPI / REST APIs | To verify | To verify | To verify | To verify | To verify |
-| Vector database / retrieval | N/A | To verify | To verify | To verify | To verify |
-| Docker / deployment | To verify | To verify | To verify | To verify | To verify |
+**Repository:** [SEVT Logistics — tiny-llm-jetson](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson)
 
-## How to update this table
-1. Inspect the actual project repository.
-2. Identify the file, function, configuration or test that proves the implementation.
-3. Change "To verify" to "Verified" only when evidence is available.
-4. Add a link to that evidence in the relevant project page.
-5. Note limitations: a library dependency alone does not prove a feature was implemented or used meaningfully.
+| Topic | Evidence file / symbol | What it demonstrates |
+|---|---|---|
+| Text corpus | [tiny_llm.py](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm.py) | Text is the training source |
+| Character tokenization | `chars`, `stoi`, `itos`, `encode`, `decode` | Character-to-integer mapping |
+| Token IDs / batches | `data`, `get_batch()` | Integer sequences and shifted targets |
+| Token embeddings | `TinyGPT.tok` | Maps token IDs to learned vectors |
+| Position embeddings | `TinyGPT.pos` | Adds learned position representations |
+| Self-attention | `Block.attn` | PyTorch multi-head attention |
+| Causal masking | `Block.forward()` | Prevents attention to future positions |
+| Feed-forward network | `Block.mlp` | Per-position nonlinear transformation |
+| Normalization / residuals | `ln1`, `ln2`, residual additions | Stabilizes and carries representations |
+| Language-model loss | `F.cross_entropy` | Next-token prediction objective |
+| Optimization | `torch.optim.AdamW` | Updates model parameters |
+| Generation | `TinyGPT.generate()` | Autoregressive next-token sampling |
+| Checkpoint verification | [test_tiny_llm.py](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/test_tiny_llm.py) | Loads weights and generates from seed strings |
+| Telugu corpus/model | [tiny_llm_telugu.py](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_telugu.py) | Telugu text dataset and character vocabulary |
+| API/backend | [telugu_voice_api.py](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/telugu_voice_api.py) | FastAPI endpoints and Gemini SDK calls |
+
+## Important distinction
+
+The custom GPT model code and deployed voice assistant API are separate paths. The current API uses the Google Gemini SDK for speech recognition, language generation and TTS; it should not be represented as serving the local TinyGPT checkpoint without further code evidence.
+
+## Other project mappings
+
+| Topic | RAG application | VLM experiments | EV application |
+|---|---|---|---|
+| Python / APIs | To verify against source | To verify against source | To verify against source |
+| Embeddings / retrieval | To verify against source | To verify against source | To verify against source |
+| Image preprocessing / vision encoder | N/A unless image documents | To verify against source | To verify against source |
+| Audio / speech | To verify against source | To verify against source | To verify against source |
+
+Update rows only after inspecting the corresponding project repository and linking exact files, functions or tests.
