@@ -2,11 +2,11 @@
 
 | Concept | Project | Evidence page | Status |
 |---|---|---|---|
-| TXT-080 — Vocabulary and Token IDs | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--vocabulary-and-token-ids.md) | Implemented |
-| TXT-090 — Sequence Length, Context Windows, Padding, Truncation and Masks | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--sequence-length-context-padding-truncation-masks.md) | Implemented |
-| TXT-100 — Text Embeddings | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--text-embeddings.md) | Implemented |
-| TXT-110 — Static, Contextual and Positional Representations | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--static-contextual-and-positional-representations.md) | Implemented |
-| TXT-120 — N-Gram and Statistical Language Models | todo-project | [Open](todo-project--ngram-language-models.md) | TODO: supply |
-| TXT-130 — RNNs, LSTMs and GRUs | todo-project | [Open](todo-project--rnn-lstm-gru.md) | TODO: supply |
+| TXT-140 — Sequence-to-Sequence Models and Teacher Forcing | todo-project | [Open](todo-project--sequence-to-sequence-and-teacher-forcing.md) | TODO: supply |
+| TXT-150 — Attention Mechanism | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--attention-mechanism.md) | Implemented |
+| TXT-160 — Transformer Architecture: Encoder, Decoder and Decoder-Only | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--transformer-architecture-overview.md) | Implemented |
+| TXT-170 — Query, Key and Value: Scaled Dot-Product Attention | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--query-key-value-scaled-dot-product-attention.md) | Implemented |
+| TXT-180 — Multi-Head Attention and Attention Masks | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--multi-head-attention-and-masks.md) | Implemented |
+| TXT-190 — Transformer Block: Feed-Forward Networks, Residuals and Normalization | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--transformer-feedforward-residual-layernorm.md) | Implemented |
 
-Personal contribution, architecture decisions, test evidence and results remain TODO where not supplied.
+Personal contributions and results remain TODO until supplied.
