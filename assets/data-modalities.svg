@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Four common data modalities</title>
+<desc id="desc">Four illustrated cards showing text, image, audio and video data and their basic digital representations.</desc>
+<rect width="1200" height="760" rx="28" fill="#f8fafc"/>
+<text x="64" y="90" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#0f172a">Four common data modalities</text>
+<text x="64" y="132" font-family="Arial,sans-serif" font-size="20" fill="#475569">Different kinds of information need different digital representations.</text>
+<g font-family="Arial,sans-serif">
+  <rect x="64" y="180" width="520" height="235" rx="22" fill="#eaf2ff" stroke="#93c5fd" stroke-width="2"/>
+  <rect x="616" y="180" width="520" height="235" rx="22" fill="#ecfdf5" stroke="#86efac" stroke-width="2"/>
+  <rect x="64" y="445" width="520" height="235" rx="22" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+  <rect x="616" y="445" width="520" height="235" rx="22" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
+  <g transform="translate(104 220)">
+    <rect width="112" height="130" rx="12" fill="#fff" stroke="#2563eb" stroke-width="3"/>
+    <path d="M22 34h68M22 58h68M22 82h50M22 106h60" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <text x="250" y="250" font-size="29" font-weight="700" fill="#1e3a8a">TEXT</text>
+  <text x="250" y="290" font-size="19" fill="#334155">Characters and words</text>
+  <text x="250" y="326" font-size="19" fill="#334155">Encoded as bytes</text>
+  <text x="250" y="362" font-size="19" fill="#334155">May be tokenized into IDs</text>
+  <g transform="translate(660 222)">
+    <rect width="130" height="126" rx="12" fill="#fff" stroke="#059669" stroke-width="3"/>
+    <circle cx="39" cy="39" r="13" fill="#f59e0b"/>
+    <path d="M12 105L48 66l22 20 20-35 30 54z" fill="#34d399" stroke="#059669" stroke-width="2"/>
+  </g>
+  <text x="820" y="250" font-size="29" font-weight="700" fill="#065f46">IMAGE</text>
+  <text x="820" y="290" font-size="19" fill="#334155">A grid of pixels</text>
+  <text x="820" y="326" font-size="19" fill="#334155">Channels such as RGB</text>
+  <text x="820" y="362" font-size="19" fill="#334155">Decoded into arrays/tensors</text>
+  <g transform="translate(104 491)" fill="none" stroke="#c2410c" stroke-width="7" stroke-linecap="round">
+    <path d="M8 58h10v-18h10v36h10V22h10v72h10V8h10v100h10V33h10v55h10V49h10v28h10"/>
+  </g>
+  <text x="250" y="515" font-size="29" font-weight="700" fill="#9a3412">AUDIO</text>
+  <text x="250" y="555" font-size="19" fill="#334155">Sound captured over time</text>
+  <text x="250" y="591" font-size="19" fill="#334155">Digital samples and channels</text>
+  <text x="250" y="627" font-size="19" fill="#334155">Waveform / spectrogram features</text>
+  <g transform="translate(660 492)">
+    <rect width="132" height="104" rx="12" fill="#fff" stroke="#7c3aed" stroke-width="3"/>
+    <rect x="12" y="12" width="32" height="80" rx="5" fill="#c4b5fd"/>
+    <rect x="50" y="12" width="32" height="80" rx="5" fill="#a78bfa"/>
+    <rect x="88" y="12" width="32" height="80" rx="5" fill="#8b5cf6"/>
+    <path d="M22 50h12M60 36h12M98 66h12" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="820" y="515" font-size="29" font-weight="700" fill="#5b21b6">VIDEO</text>
+  <text x="820" y="555" font-size="19" fill="#334155">Frames arranged over time</text>
+  <text x="820" y="591" font-size="19" fill="#334155">Timestamps and frame rate</text>
+  <text x="820" y="627" font-size="19" fill="#334155">May include a separate audio track</text>
+</g>
+<text x="64" y="724" font-family="Arial,sans-serif" font-size="17" fill="#64748b">Conceptual overview — exact representation depends on file format and model architecture.</text>
+</svg>
