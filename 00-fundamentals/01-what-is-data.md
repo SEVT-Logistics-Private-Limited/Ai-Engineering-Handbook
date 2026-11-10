@@ -29,6 +29,10 @@ Data and information are related but not identical. Data is a recorded value; in
 
 ## 2. Common forms of data
 
+![Four common data modalities](../assets/data-modalities.svg)
+
+*Figure 1 — Text, image, audio and video data, with their common digital representations.*
+
 | Modality | Human example | Typical digital representation |
 |---|---|---|
 | Text | Message or book | Characters encoded as bytes; later possibly tokens |
@@ -71,6 +75,10 @@ JSON and XML are common examples.
 Unstructured data does not naturally fit a single fixed tabular schema. Examples include images, audio recordings, videos, PDFs and free-form documents. It does not mean the content has no internal structure: images have pixels and dimensions; audio has samples and timing; video has frames and timestamps.
 
 ## 4. How a computer represents data
+
+![From real-world data to an AI result](../assets/ai-data-pipeline.svg)
+
+*Figure 2 — A conceptual path from capture to digital processing. The following Mermaid diagram shows the same idea in an editable form.*
 
 Computers operate using physical electrical states. Digital systems represent information using discrete states, commonly abstracted as binary digits: 0 and 1.
 
