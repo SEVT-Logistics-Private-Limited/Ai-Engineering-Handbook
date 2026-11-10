@@ -2,9 +2,12 @@
 
 | Concept | Project | Evidence page | Status |
 |---|---|---|---|
-| TXT-200 — GPT, Next-Token Prediction and Autoregressive Generation | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--gpt-next-token-autoregressive-generation.md) | Implemented |
-| TXT-210 — BERT, T5 and Transformer Architecture Comparison | todo-project | [Open](todo-project--bert-t5-and-architecture-comparison.md) | TODO: supply |
-| TXT-220 — LLM Pretraining and Inference | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--llm-pretraining-and-inference.md) | Implemented |
-| TXT-230 — Prompting, Context Construction and Decoding Controls | telugu-voice-assistant | [Open](telugu-voice-assistant--prompting-context-and-decoding-controls.md) | Implemented |
-| TXT-240 — Instruction Tuning and Supervised Fine-Tuning | todo-project | [Open](todo-project--instruction-tuning-and-supervised-finetuning.md) | TODO: supply |
-| TXT-250 — LoRA and Parameter-Efficient Adapters | todo-project | [Open](todo-project--lora-and-adapters.md) | TODO: supply |
+| TXT-260 — Quantization, Pruning and Knowledge Distillation | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--quantization-pruning-distillation.md) | Explored |
+| TXT-270 — LLM Evaluation, Hallucinations and Grounding | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--llm-evaluation-hallucinations-and-grounding.md) | Tested |
+| TXT-280 — Retrieval-Augmented Generation (RAG) Fundamentals | telugu-voice-assistant | [Open](telugu-voice-assistant--rag-fundamentals.md) | TODO: supply |
+| TXT-290 — Advanced RAG: Hybrid Search, Reranking and Query Transformation | todo-project | [Open](todo-project--advanced-rag-retrieval-strategies.md) | TODO: supply |
+| TXT-300 — AI Agents: Tool Calling, Planning and Memory | yoda-agentic-workflows | [Open](yoda-agentic-workflows--agents-tool-calling-planning-memory.md) | TODO: supply |
+| TXT-310 — Multi-Agent Systems, Guardrails and Evaluation | yoda-agentic-workflows | [Open](yoda-agentic-workflows--multi-agent-systems-guardrails-evaluation.md) | TODO: supply |
+| TXT-320 — Text Input/Output Patterns Across AI Systems | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--text-input-output-patterns.md) | Implemented |
+
+Missing project detail, contribution and metrics remain TODO.
