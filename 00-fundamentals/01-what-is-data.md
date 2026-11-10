@@ -1,60 +1,48 @@
 # Lesson 01 — What Is Data?
 
-> **Phase:** 00 — Computer Fundamentals  
+> **Module:** 00 — Computer Fundamentals  
 > **Level:** Beginner  
-> **Status:** First-pass lesson; revise after exercises  
 > **Prerequisites:** None  
-> **Next lesson:** [Bits, Bytes and Binary](02-bits-bytes-binary.md)
+> **Next lesson:** [Lesson 02 — Bits, Bytes and Binary](02-bits-bytes-binary.md)
 
-## 1. Learning objectives
+![Computing hardware illustration](https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop&q=80)
+*Illustrative computing hardware image. This is a visual aid, not a diagram of a specific processor.*
 
-By the end of this lesson, you should be able to:
-- Define data in simple terms.
-- Distinguish structured, semi-structured and unstructured data.
-- Recognize text, numeric, image, audio, video and location data.
-- Explain why computers need digital representations of data.
-- Use Python to inspect a few basic data types and serialize structured data.
+## Learning objectives
 
-## 2. What is data?
+After this lesson, you should be able to define data, distinguish data organization categories, identify common modalities, explain why computers need digital representations, and inspect basic values with Python.
+
+## 1. What is data?
 
 **Data is a recorded value, observation or collection of facts that can be stored, processed or communicated.**
 
 Examples:
-- `"Rishi"` is text data.
-- `25` is integer data.
-- `98.5` is decimal/float data.
-- A photograph is image data.
-- A voice recording is audio data.
-- A movie is video data.
-- GPS coordinates are location data.
+- `"Rishi"` — text
+- `25` — integer
+- `98.5` — decimal value
+- A photograph — image data
+- A voice recording — audio data
+- A movie — video data
+- GPS coordinates — location data
 
-Data and information are related, but not identical. Data is the recorded value; information is what we understand from that value in a context.
+Data and information are related but not identical. Data is a recorded value; information is the meaning we interpret from data in context. For example, `38` is data. When we learn that it is today's temperature in degrees Celsius, it becomes meaningful information.
 
-Example:
-- Data: `38`
-- Context: today's temperature in degrees Celsius
-- Information: the temperature is 38°C, which is hot.
+## 2. Common forms of data
 
-## 3. Common data types by content
-
-| Kind | Example | Common digital representation |
+| Modality | Human example | Typical digital representation |
 |---|---|---|
-| Text | A message or document | Characters encoded as bytes; later possibly tokens |
-| Numeric | Age, price, sensor reading | Binary integer or floating-point representation |
-| Image | Photograph | Encoded file; decoded into pixel values |
-| Audio | Voice recording | Encoded audio; decoded into a sequence of samples |
-| Video | Movie clip | Container with encoded video frames and possibly audio |
-| Location | Latitude and longitude | Numeric coordinates plus coordinate-system metadata |
-| Structured records | Customer table | Typed fields and records |
-| Semi-structured records | JSON object | Keys, values, arrays and nested objects |
+| Text | Message or book | Characters encoded as bytes; later possibly tokens |
+| Numeric | Age or sensor reading | Binary integer or floating-point value |
+| Image | Photograph | Encoded file decoded into pixel values |
+| Audio | Speech recording | Encoded audio decoded into samples over time |
+| Video | Movie | Container holding encoded frames and possibly audio |
+| Location | GPS position | Coordinates plus reference-system metadata |
 
-A file extension is a clue, not a complete explanation of its contents. A file can also contain metadata, compression and multiple streams.
+## 3. How data is organized
 
-## 4. Data organization
+### Structured data
 
-### 4.1 Structured data
-
-Structured data follows a defined schema, often represented as rows and columns.
+Structured data follows a defined schema, often rows and columns.
 
 | Employee | Age | Department |
 |---|---:|---|
@@ -62,13 +50,11 @@ Structured data follows a defined schema, often represented as rows and columns.
 | Anika | 27 | Finance |
 | Dev | 24 | Support |
 
-Typical examples: relational database tables, spreadsheets and consistently structured sensor records.
+Common examples are relational database tables and spreadsheets.
 
-### 4.2 Semi-structured data
+### Semi-structured data
 
-Semi-structured data has organizational markers such as keys, tags or nested objects, but does not need to fit one fixed table.
-
-Example JSON:
+Semi-structured data has organizational markers such as keys, tags or nested objects, but need not fit one fixed table.
 
 ```json
 {
@@ -78,19 +64,15 @@ Example JSON:
 }
 ```
 
-Typical examples: JSON, XML and many application logs.
+JSON and XML are common examples.
 
-### 4.3 Unstructured data
+### Unstructured data
 
-Unstructured data does not naturally fit a single fixed tabular schema. Examples include photographs, audio recordings, videos, PDFs and free-form documents.
+Unstructured data does not naturally fit a single fixed tabular schema. Examples include images, audio recordings, videos, PDFs and free-form documents. It does not mean the content has no internal structure: images have pixels and dimensions; audio has samples and timing; video has frames and timestamps.
 
-"Unstructured" does not mean that the data has no internal structure. An image has pixels and dimensions; audio has samples and timing; video has frames and timestamps. It means there is no simple universal row-and-column schema for the content.
+## 4. How a computer represents data
 
-## 5. How does a computer work with data?
-
-A computer's hardware operates using physical electrical states. Digital systems represent information using discrete states, commonly abstracted as binary digits: 0 and 1.
-
-A simplified path is:
+Computers operate using physical electrical states. Digital systems represent information using discrete states, commonly abstracted as binary digits: 0 and 1.
 
 ```mermaid
 flowchart TD
@@ -102,17 +84,20 @@ flowchart TD
     F --> G[Output or action]
 ```
 
-Examples:
-- Text is encoded using a character encoding such as UTF-8.
-- An image file is decoded into pixel values.
+The details differ by modality:
+- Text uses character encodings such as UTF-8.
+- Image files are decoded into pixel arrays.
 - Digital audio is represented as samples over time.
-- Video commonly contains a sequence of timestamped frames and may contain an audio stream.
+- Video commonly contains timestamped frames and may contain an audio stream.
 
-The details differ by modality. We will study each pipeline in the data fundamentals phase.
+A file extension is only a clue. A format may also contain compression, metadata and multiple streams.
 
-## 6. How data becomes useful to AI
+## 5. How data enters an AI system
 
-Consider an image-classification application that predicts whether a picture contains a cat or a dog.
+Consider an image classifier that predicts whether an image contains a cat or dog.
+
+![Example cat photograph](https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=900&auto=format&fit=crop&q=80)
+*Illustrative example image. A classifier receives decoded and preprocessed pixel data.*
 
 ```mermaid
 flowchart TD
@@ -123,13 +108,11 @@ flowchart TD
     E --> F[Predicted class]
 ```
 
-The model does not receive the human experience of "looking at a photo." It receives a numerical representation produced by the input pipeline. It uses patterns learned during training to produce a prediction.
+The model receives a numerical representation produced by the input pipeline. It uses patterns learned during training to make a prediction.
 
-This is a simplified illustration. Different vision models use different preprocessing and architectures.
+## 6. Python lab: inspect different data
 
-## 7. Python lab: inspect data
-
-### 7.1 Basic Python values
+### 6.1 Basic Python values
 
 ```python
 name = "Rishi"
@@ -137,15 +120,13 @@ age = 25
 temperature = 38.5
 is_learning_ai = True
 
-print(type(name))             # <class 'str'>
-print(type(age))              # <class 'int'>
-print(type(temperature))      # <class 'float'>
-print(type(is_learning_ai))   # <class 'bool'>
+print(type(name))             # str
+print(type(age))              # int
+print(type(temperature))      # float
+print(type(is_learning_ai))   # bool
 ```
 
-Python objects have types. The type influences which operations make sense.
-
-### 7.2 Represent a structured record
+### 6.2 Structured data using a dictionary
 
 ```python
 person = {
@@ -158,54 +139,48 @@ print(person["name"])
 print(person["skills"][0])
 ```
 
-A Python dictionary is a convenient in-memory key/value structure. It is not automatically a database.
+A dictionary is a convenient in-memory key/value structure. It is not automatically a database.
 
-### 7.3 Serialize structured data as JSON
+### 6.3 Convert a Python object to JSON
 
 ```python
 import json
 
-person = {
-    "name": "Rishi",
-    "age": 25,
-    "skills": ["Python", "AWS", "AI"],
-}
-
+person = {"name": "Rishi", "age": 25, "skills": ["Python", "AWS", "AI"]}
 json_text = json.dumps(person, indent=2)
 print(json_text)
 
-restored_person = json.loads(json_text)
-print(restored_person["name"])
+restored = json.loads(json_text)
+print(restored["name"])
 ```
 
 - `json.dumps` converts a Python-compatible object into JSON text.
 - `json.loads` parses JSON text into Python objects.
-- JSON is a text format. It is not the same thing as Python's in-memory dictionary.
+- JSON is a text format; it is not the same as Python's in-memory dictionary.
 
-### 7.4 Text becomes bytes when encoded
+### 6.4 Text becomes bytes when encoded
 
 ```python
 message = "Hello, AI!"
-
 encoded = message.encode("utf-8")
 decoded = encoded.decode("utf-8")
 
-print(encoded)          # bytes
-print(type(encoded))    # <class 'bytes'>
-print(decoded)          # Hello, AI!
+print(encoded)
+print(type(encoded))  # bytes
+print(decoded)
 ```
 
-UTF-8 encodes text into bytes. The next lesson explains how bits and bytes work.
+UTF-8 defines how Unicode text is represented as bytes. We will study the binary level in the next lesson.
 
-### 7.5 Inspect an image as numerical data
+### 6.5 Inspect image pixels
 
-Install Pillow if needed:
+Install Pillow:
 
 ```bash
 python -m pip install pillow
 ```
 
-Then:
+Run this with a local image named `sample.jpg`:
 
 ```python
 from PIL import Image
@@ -215,96 +190,109 @@ print("Format:", image.format)
 print("Mode:", image.mode)
 print("Size:", image.size)
 
-rgb_image = image.convert("RGB")
-pixels = list(rgb_image.getdata())
-
+rgb = image.convert("RGB")
+pixels = list(rgb.getdata())
 print("First pixel:", pixels[0])
 print("Number of pixels:", len(pixels))
 ```
 
-A pixel in an RGB image is commonly represented by three channel values. The exact range and representation depend on the image mode and processing pipeline. We will explore image tensors in Phase 01.
+For an RGB image, a pixel is commonly a tuple of red, green and blue channel values. The exact representation depends on image mode and the processing pipeline.
 
-## 8. Common misunderstandings
+## 7. Connect the concept to the Tiny LLM project
 
-| Incorrect assumption | Correct understanding |
+### Project reference
+
+**[SEVT Logistics — tiny-llm-jetson](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson)**
+
+This repository is a practical companion for text and LLM topics. Its README documents GPT-style model experiments at multiple scales, a Telugu-language model and a separate Telugu voice-assistant deployment.
+
+| What to study | Why it matters |
 |---|---|
-| All data is text | Data can be numeric, visual, audio, video, structured and more |
-| A computer understands a photo like a human | Software decodes it into numerical values and a model processes those values |
-| Unstructured means no structure exists | It means there is no simple fixed tabular schema for the content |
-| A token is the same as a byte | Tokens are tokenizer-defined units; bytes are groups of binary digits |
-| Every AI model uses embeddings in the same way | Representations and architectures vary by model |
+| [Project README](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson#readme) | Project goals, model progression and hardware context |
+| [tiny_llm.py](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm.py) | Character corpus, tokenizer, token IDs, batching and GPT model |
+| [tiny_llm_1m.py](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_1m.py) | Larger configuration using the same general text-processing pattern |
+| [tiny_llm_telugu.py](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_telugu.py) | Telugu text dataset and character-level vocabulary |
+| [test_tiny_llm.py](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/test_tiny_llm.py) | Reload checkpoint and generate text |
+| [Telugu model card](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/model-card-telugu.md) | Model configuration, data and reported training results |
 
-## 9. Real-world applications
+### What the code demonstrates
 
-- Banking: transactions, customer records, documents and fraud signals.
-- Healthcare: structured observations, medical images and clinical text.
-- E-commerce: product catalogs, photographs, reviews and click events.
-- Voice assistants: audio input, transcripts, language-model context and generated speech.
-- Autonomous systems: camera frames, sensor readings, location and timing data.
+In `tiny_llm.py`, a repeated English text string is used as the corpus. The code builds a set of unique characters, creates character-to-integer and integer-to-character maps, encodes the corpus into integer IDs, and creates input/target sequences for next-character prediction.
 
-## 10. Connection to my AI engineering learning
+```mermaid
+flowchart TD
+    A[Text corpus] --> B[Find unique characters]
+    B --> C[Build stoi and itos maps]
+    C --> D[Encode as integer IDs]
+    D --> E[Create shifted input and target batches]
+    E --> F[Token and position embeddings]
+    F --> G[GPT Transformer]
+    G --> H[Next-token logits and loss]
+    H --> I[Train or generate text]
+```
 
-This topic is foundational to all the projects in the portfolio.
+Simplified code pattern from the project:
 
-| Project area | Data encountered or expected | What to inspect in source |
-|---|---|---|
-| Tiny LLM | Text, token IDs, tensors | Dataset loader, tokenizer and training input |
-| RAG application | Documents, text chunks, metadata, vectors | File parser, chunker, embedding and retrieval code |
-| VLM experiments | Image files, pixel tensors and text prompts | Image processor, model inputs and inference code |
-| Telugu voice assistant | Audio, transcript text and generated audio | Audio capture, ASR, orchestration and TTS components |
-| EV AI application | Depends on actual product scope | Input schema, data source and model/API boundary |
+```python
+text = "to be or not to be that is the question " * 200
+chars = sorted(set(text))
+stoi = {c: i for i, c in enumerate(chars)}
+itos = {i: c for c, i in stoi.items()}
+encode = lambda s: [stoi[c] for c in s]
+decode = lambda ids: "".join(itos[i] for i in ids)
+data = [stoi[c] for c in text]
+```
 
-**Evidence status:** These are project areas to investigate, not claims that every listed component has already been implemented. Add exact repository links, function names and tests after inspecting each project's source.
+**Important distinction:** The scripts use a character-level tokenizer, not a modern subword tokenizer such as BPE. A character is mapped to an integer ID; the embedding layer later maps that ID to a learned vector.
 
-## 11. Interview preparation
+### Local GPT model versus deployed voice assistant
+
+The custom GPT training scripts and deployed voice assistant API are separate paths. The current `telugu_voice_api.py` imports the Google Gemini SDK for speech recognition, language response generation and speech output. Do not describe the deployed API as serving the local TinyGPT checkpoint unless that integration is changed and verified.
+
+## 8. Interview preparation
 
 ### Beginner questions
 1. What is data?
 2. What is the difference between data and information?
 3. What are structured, semi-structured and unstructured data?
 4. Give examples of text, image, audio and video data.
-5. Why does a computer need a digital representation?
+5. Why does a computer need digital representations?
 
 ### Intermediate questions
-1. Is JSON structured or semi-structured data? Why?
-2. What happens when a Python string is encoded as UTF-8?
-3. Why is an image ultimately processed numerically by a typical computer-vision model?
-4. Does unstructured data mean that it has no internal organization?
+1. Is JSON structured or semi-structured? Explain.
+2. What happens when a Python string is encoded using UTF-8?
+3. Why does a computer-vision model need numerical image input?
+4. Does unstructured data mean there is no internal organization?
 
-### Project-based question
-**How does data enter your RAG application and become useful to the LLM?**
+### Project question
 
-A good answer should describe the actual flow in your implementation: document input, parsing, chunking, metadata, embeddings, retrieval and context passed to the model. Verify every component against the source code before claiming it.
+**How does text become model input in your Tiny LLM project?**
 
-## 12. Exercises
+A source-based answer: the script starts with a text corpus, constructs a character vocabulary, maps each character to an integer ID, builds shifted sequences for next-character prediction, and passes IDs to token and position embedding layers. See [tiny_llm.py](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm.py).
+
+## 9. Exercises
 
 1. Give two examples each of structured, semi-structured and unstructured data.
 2. Create a Python dictionary for a book with title, author, year and topics.
-3. Convert that dictionary to JSON text and parse it back.
-4. Encode the sentence `"AI starts with data"` into UTF-8 bytes and decode it.
-5. Open an image using Pillow and print its dimensions and mode.
-6. Draw a data pipeline for a voice assistant.
+3. Serialize the dictionary to JSON and parse it back.
+4. Encode `AI starts with data` into UTF-8 bytes and decode it.
+5. Open an image with Pillow and print its dimensions and mode.
+6. Explain the character-to-ID mapping in `tiny_llm.py`.
+7. Draw the data path from Telugu corpus text to integer IDs in `tiny_llm_telugu.py`.
 
-### Self-check
-
-You are ready for the next lesson when you can explain:
-- what data is;
-- the three data-organization categories;
-- why computers use digital representations;
-- how JSON and UTF-8 relate to data handling;
-- why AI models need numerical inputs.
-
-## 13. Key takeaways
+## 10. Key takeaways
 
 - Data is recorded values or observations that can be stored and processed.
 - Data can be text, numbers, images, audio, video and more.
 - Structured, semi-structured and unstructured describe ways data is organized.
-- Computers process digital representations, not human meaning directly.
-- AI applications transform input data into model-compatible representations.
+- Computers operate on digital representations.
+- The Tiny LLM project demonstrates one concrete text path: characters → integer IDs → model inputs.
+- Project statements should be supported by source code, tests or model cards.
 
-## 14. References
+## 11. References
 
 - [Python built-in types](https://docs.python.org/3/library/stdtypes.html)
 - [Python JSON documentation](https://docs.python.org/3/library/json.html)
 - [Python codecs documentation](https://docs.python.org/3/library/codecs.html)
 - [Pillow documentation](https://pillow.readthedocs.io/)
+- [Tiny LLM project README](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson#readme)
