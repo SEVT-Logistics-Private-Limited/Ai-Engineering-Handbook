@@ -1,15 +1,12 @@
 # Text — Project Evidence Index
 
-## Existing evidence pages
+| Concept | Project | Evidence page | Status |
+|---|---|---|---|
+| TXT-020 — Character Sets and Unicode Code Points | todo-project | [Open](todo-project--character-sets-and-code-points.md) | TODO: supply |
+| TXT-030 — ASCII: The Original 7-Bit Character Code | todo-project | [Open](todo-project--ascii.md) | TODO: supply |
+| TXT-040 — Unicode and UTF-8 Encoding / Decoding | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--unicode-and-utf8-encoding-decoding.md) | Explored |
+| TXT-050 — Text Files, Markup, Normalization and Newlines | todo-project | [Open](todo-project--text-files-markup-normalization-newlines.md) | TODO: supply |
+| TXT-060 — Text Cleaning and Preprocessing | todo-project | [Open](todo-project--text-cleaning-and-preprocessing.md) | TODO: supply |
+| TXT-070 — Tokenization: Character, Word and Subword Methods | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--tokenization-character-word-subword.md) | Implemented |
 
-| Project | Concept | Evidence page |
-|---|---|---|
-| Tiny GPT — Jetson + Colab | TXT-010 — What Is Text? | [Text corpus and character representation](tiny-gpt-jetson-colab--what-is-text.md) |
-
-## Candidate future evidence
-
-- Tiny GPT: encoding, tokenization, token IDs, embeddings, attention, training and generation — create individual evidence pages as each concept is covered and the relevant code is checked.
-- Telugu voice assistant: create text-related evidence pages only after its text handling and your exact contribution are documented.
-- YODA: create text-related evidence pages only after its prompt/input/output and workflow details are supplied.
-
-Evidence status refers to what is visible in project source; your exact personal contribution, decisions, failures and additional metrics remain `TODO: supply` until you provide them.
+TODO fields require owner-supplied project facts before a portfolio claim is made.
