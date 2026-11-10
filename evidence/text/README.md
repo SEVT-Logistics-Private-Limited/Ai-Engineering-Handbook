@@ -2,11 +2,9 @@
 
 | Concept | Project | Evidence page | Status |
 |---|---|---|---|
-| TXT-140 — Sequence-to-Sequence Models and Teacher Forcing | todo-project | [Open](todo-project--sequence-to-sequence-and-teacher-forcing.md) | TODO: supply |
-| TXT-150 — Attention Mechanism | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--attention-mechanism.md) | Implemented |
-| TXT-160 — Transformer Architecture: Encoder, Decoder and Decoder-Only | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--transformer-architecture-overview.md) | Implemented |
-| TXT-170 — Query, Key and Value: Scaled Dot-Product Attention | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--query-key-value-scaled-dot-product-attention.md) | Implemented |
-| TXT-180 — Multi-Head Attention and Attention Masks | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--multi-head-attention-and-masks.md) | Implemented |
-| TXT-190 — Transformer Block: Feed-Forward Networks, Residuals and Normalization | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--transformer-feedforward-residual-layernorm.md) | Implemented |
-
-Personal contributions and results remain TODO until supplied.
+| TXT-200 — GPT, Next-Token Prediction and Autoregressive Generation | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--gpt-next-token-autoregressive-generation.md) | Implemented |
+| TXT-210 — BERT, T5 and Transformer Architecture Comparison | todo-project | [Open](todo-project--bert-t5-and-architecture-comparison.md) | TODO: supply |
+| TXT-220 — LLM Pretraining and Inference | tiny-gpt-jetson-colab | [Open](tiny-gpt-jetson-colab--llm-pretraining-and-inference.md) | Implemented |
+| TXT-230 — Prompting, Context Construction and Decoding Controls | telugu-voice-assistant | [Open](telugu-voice-assistant--prompting-context-and-decoding-controls.md) | Implemented |
+| TXT-240 — Instruction Tuning and Supervised Fine-Tuning | todo-project | [Open](todo-project--instruction-tuning-and-supervised-finetuning.md) | TODO: supply |
+| TXT-250 — LoRA and Parameter-Efficient Adapters | todo-project | [Open](todo-project--lora-and-adapters.md) | TODO: supply |

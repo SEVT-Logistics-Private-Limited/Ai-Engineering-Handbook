@@ -2,11 +2,9 @@
 
 | ID | Concept | Phase | Concept page | Evidence page |
 |---|---|---|---|---|
-| TXT-140 | Sequence-to-Sequence Models and Teacher Forcing | Later | [Open](140-sequence-to-sequence-and-teacher-forcing.md) | [Evidence](../../evidence/text/todo-project--sequence-to-sequence-and-teacher-forcing.md) |
-| TXT-150 | Attention Mechanism | Phase 1 | [Open](150-attention-mechanism.md) | [Evidence](../../evidence/text/tiny-gpt-jetson-colab--attention-mechanism.md) |
-| TXT-160 | Transformer Architecture: Encoder, Decoder and Decoder-Only | Phase 1 | [Open](160-transformer-architecture-overview.md) | [Evidence](../../evidence/text/tiny-gpt-jetson-colab--transformer-architecture-overview.md) |
-| TXT-170 | Query, Key and Value: Scaled Dot-Product Attention | Phase 1 | [Open](170-query-key-value-scaled-dot-product-attention.md) | [Evidence](../../evidence/text/tiny-gpt-jetson-colab--query-key-value-scaled-dot-product-attention.md) |
-| TXT-180 | Multi-Head Attention and Attention Masks | Phase 1 | [Open](180-multi-head-attention-and-masks.md) | [Evidence](../../evidence/text/tiny-gpt-jetson-colab--multi-head-attention-and-masks.md) |
-| TXT-190 | Transformer Block: Feed-Forward Networks, Residuals and Normalization | Phase 1 | [Open](190-transformer-feedforward-residual-layernorm.md) | [Evidence](../../evidence/text/tiny-gpt-jetson-colab--transformer-feedforward-residual-layernorm.md) |
-
-Follow IDs in taxonomy order.
+| TXT-200 | GPT, Next-Token Prediction and Autoregressive Generation | Phase 1 | [Open](200-gpt-next-token-autoregressive-generation.md) | [Evidence](../../evidence/text/tiny-gpt-jetson-colab--gpt-next-token-autoregressive-generation.md) |
+| TXT-210 | BERT, T5 and Transformer Architecture Comparison | Later | [Open](210-bert-t5-and-architecture-comparison.md) | [Evidence](../../evidence/text/todo-project--bert-t5-and-architecture-comparison.md) |
+| TXT-220 | LLM Pretraining and Inference | Phase 1 | [Open](220-llm-pretraining-and-inference.md) | [Evidence](../../evidence/text/tiny-gpt-jetson-colab--llm-pretraining-and-inference.md) |
+| TXT-230 | Prompting, Context Construction and Decoding Controls | Phase 1 | [Open](230-prompting-context-and-decoding-controls.md) | [Evidence](../../evidence/text/telugu-voice-assistant--prompting-context-and-decoding-controls.md) |
+| TXT-240 | Instruction Tuning and Supervised Fine-Tuning | Later | [Open](240-instruction-tuning-and-supervised-finetuning.md) | [Evidence](../../evidence/text/todo-project--instruction-tuning-and-supervised-finetuning.md) |
+| TXT-250 | LoRA and Parameter-Efficient Adapters | Later | [Open](250-lora-and-adapters.md) | [Evidence](../../evidence/text/todo-project--lora-and-adapters.md) |
