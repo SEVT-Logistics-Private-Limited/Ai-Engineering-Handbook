@@ -2,61 +2,62 @@
 
 **From digital-data fundamentals to production AI engineering.**
 
-This repository is a structured, practical knowledge base for understanding how AI systems work from first principles and how those concepts are implemented in real applications. It connects theory, data flow, code, engineering decisions, project evidence, and interview preparation.
+A visual, practical handbook for understanding AI from first principles. Each lesson combines plain-language explanations, diagrams, worked examples, Python labs, project evidence and interview preparation.
 
-## Mission
+## Explore the handbook
 
-Build a reliable reference that answers five questions for every technology:
-1. What is it?
-2. Why is it needed?
-3. How does it work internally?
-4. How can it be implemented and tested?
-5. Where have I used it in a real project, and what evidence supports that claim?
-
-## Learning map
-
-| Stage | Area | Coverage |
+| Module | What you will learn | Start here |
 |---|---|---|
-| 00 | Fundamentals | Data, bits, bytes, computing, AI, ML, deep learning |
-| 01 | Data modalities | Text, images, audio, video, structured and multimodal data |
-| 02 | Data processing | Encoding, preprocessing, tokenization, embeddings, feature extraction |
-| 03–04 | ML and deep learning | Learning paradigms, neural networks, optimization, CNNs, RNNs, Transformers |
-| 05–09 | Modality-specific AI | NLP/LLMs, computer vision, audio AI, video AI, multimodal AI/VLMs |
-| 10 | Generative AI | Generative models, diffusion, prompting |
-| 11–12 | AI application patterns | RAG, vector search, agents, tools and workflows |
-| 13 | AI engineering | Python, APIs, FastAPI, databases, testing, deployment, monitoring, security |
-| 14 | Projects | Architecture, implementation, evidence, testing, challenges and outcomes |
-| 15 | Interview preparation | Conceptual, coding, system-design and project-based questions |
+| 00 — Computer fundamentals | Data, binary, bits, bytes, computing and AI foundations | [Fundamentals](00-fundamentals/README.md) |
+| 01 — Data fundamentals | How text, images, audio and video are represented | [Data fundamentals](01-data-fundamentals/README.md) |
+| 02 — Data processing | Encoding, preprocessing, tokenization, tensors and embeddings | [Processing](02-data-processing/README.md) |
+| 03–04 — ML and deep learning | How models learn, neural networks, optimizers and Transformers | [Machine learning](03-machine-learning/README.md) |
+| 05 — Text AI and LLMs | NLP, tokenization, attention, GPT, training and inference | [Text AI](05-text-ai/README.md) |
+| 06 — Image AI | Pixels, image processing, CNNs and vision models | [Image AI](06-image-ai/README.md) |
+| 07 — Audio AI | Digital sound, speech recognition and speech generation | [Audio AI](07-audio-ai/README.md) |
+| 08 — Video AI | Frames, temporal information and video understanding | [Video AI](08-video-ai/README.md) |
+| 09 — Multimodal AI | VLMs, image-text alignment and multimodal architectures | [Multimodal AI](09-multimodal-ai/README.md) |
+| 11 — RAG | Parsing, chunking, embeddings, retrieval and grounded generation | [RAG](11-rag/README.md) |
+| 13 — AI engineering | Python, APIs, FastAPI, data stores, deployment and monitoring | [AI engineering](13-ai-engineering/README.md) |
+| 14 — Project portfolio | Architecture, implementation evidence, tests and lessons learned | [Projects](14-projects/README.md) |
 
-See [the detailed roadmap](ROADMAP.md) and [the learning map](docs/LEARNING-MAP.md).
+See the [complete roadmap](ROADMAP.md), [learning map](docs/LEARNING-MAP.md), [learning tracker](LEARNING-PROGRESS.md) and [glossary](GLOSSARY.md).
 
-## Repository principles
+## Featured project: Tiny LLM on Jetson
 
-- **Start at zero:** explain prerequisites and terminology before advanced concepts.
-- **Explain the mechanism:** include step-by-step flows, shapes, examples, diagrams and equations where useful.
-- **Connect concepts to implementation:** include runnable examples and code walkthroughs when appropriate.
-- **Separate knowledge from evidence:** distinguish a technology being studied from one actually implemented in a project.
-- **Be precise about project claims:** cite the exact repository, file, function, configuration or test that proves an implementation.
-- **Keep it maintainable:** use the shared [topic template](resources/templates/TOPIC-TEMPLATE.md), progress tracker and glossary.
+This handbook is connected to the practical project: **[SEVT Logistics — tiny-llm-jetson](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson)**.
 
-## Topic documentation format
+The project README documents GPT-style model experiments at multiple scales, a Telugu-language model and a separate Telugu voice-assistant deployment.
 
-Every topic should cover: definition; prerequisites; problem solved; internal working; architecture/data flow; terminology; worked example; implementation; testing and trade-offs; real-world uses; project connection and evidence; interview questions; references.
+Useful entry points:
+- [Project overview and model progression](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson#readme)
+- [Tiny GPT implementation](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm.py)
+- [1M parameter experiment](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_1m.py)
+- [Telugu GPT implementation](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_telugu.py)
+- [Telugu model card](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/model-card-telugu.md)
+- [Tiny GPT checkpoint test](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/test_tiny_llm.py)
+- [Telugu voice API](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/telugu_voice_api.py)
+- [Compression experiments](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/tree/main/compression)
 
-## Project portfolio
+### Important project distinction
 
-Project pages are indexed in [the project portfolio](14-projects/README.md). Initial areas to document include a Tiny LLM / GPT-style PyTorch implementation, a RAG application, VLM experiments, a Telugu voice assistant, and an EV AI application. Details are intentionally marked **to verify** until source code, configuration or test evidence has been inspected.
+The TinyGPT scripts implement and train small GPT-style models. The current telugu_voice_api.py uses the Google Gemini SDK for speech recognition, language response generation and speech output. Do not describe the deployed voice assistant as serving the locally trained TinyGPT checkpoint unless the integration is changed and verified.
 
-## Start here
+## How to use this handbook
 
-1. Read [00 — Fundamentals](00-fundamentals/README.md).
-2. Continue with [01 — Data Fundamentals](01-data-fundamentals/README.md).
-3. Study the modality processing pipelines in [02 — Data Processing](02-data-processing/README.md).
-4. Follow the [complete roadmap](ROADMAP.md).
-5. Track progress in [LEARNING-PROGRESS.md](LEARNING-PROGRESS.md).
+1. Start with [Lesson 01 — What Is Data?](00-fundamentals/01-what-is-data.md).
+2. Follow the diagrams and explain the flow aloud in your own words.
+3. Run the Python exercises and record your output.
+4. Open the linked project files and compare the theory with actual implementation.
+5. Complete the questions and exercises before moving forward.
+6. Use the [topic template](resources/templates/TOPIC-TEMPLATE.md) for every new lesson.
 
-## Status and contribution
+## Documentation standard
 
-This is a continuously evolving personal engineering handbook. Prefer small, focused topic pages. Add source links and dates to external references. Do not publish credentials, private customer data, proprietary source code, or confidential project details.
+Every topic aims to include a beginner-friendly definition, why it exists, internal working, Mermaid diagrams, terminology, worked examples, runnable Python, testing and limitations, project evidence, interview questions, exercises and trusted references.
+
+## Evidence and accuracy rules
+
+A topic appearing in this handbook does not automatically mean it was implemented in a project. Project claims must point to an actual source file, function, configuration, test or model card. Label unverified items as **To verify**. Never publish credentials, confidential customer data or proprietary material.
 
 **Learn the fundamentals. Understand the architecture. Build the technology. Document the evidence.**
