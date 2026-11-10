@@ -5,7 +5,7 @@ Only owner-supplied project summaries are recorded here. Stack, architecture, me
 ## 1. Tiny GPT-style LLM training on Jetson + Colab
 - Project slug: `tiny-gpt-jetson-colab`
 - Supplied scope: Tiny GPT-style LLM training on Jetson + Colab.
-- Repository URL: TODO: supply/confirm.
+- Repository URL: https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson
 - Dates and status: TODO: supply.
 - Exact contribution: TODO: supply.
 - Architecture, model configurations and training data: TODO: supply.
