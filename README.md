@@ -1,67 +1,110 @@
-# AI Engineering Handbook
+# First-Principles AI Knowledge Base
 
-**From digital-data fundamentals to production AI engineering.**
+**A modality-first AI/ML learning repo and evidence-backed engineering portfolio.**
 
-A visual, practical handbook for understanding AI from first principles. Each lesson combines plain-language explanations, diagrams, worked examples, Python labs, project evidence and interview preparation.
+This repository is designed to teach AI from the ground up. It deliberately separates **concept pages** (what a technology is and how it works) from **project-evidence pages** (what was actually built, what your exact contribution was, and what evidence supports it).
 
-![AI data modalities](assets/data-modalities.svg)
+> **Current phase: structure only.** Concept explanations and project implementation claims are intentionally not written yet. Missing project facts remain `TODO: supply`.
 
-*The handbook starts with the data itself, then follows how different modalities are represented and processed by AI systems.*
+## Learning path
 
-## Explore the handbook
+```mermaid
+flowchart TD
+  A[First principles: data, bits, bytes, files] --> B[Digital representations]
+  B --> T[Text] & I[Image] & V[Video] & AU[Audio]
+  T --> L[Sequence models, Transformers and LLMs]
+  I --> CV[Computer vision and image models]
+  V --> VV[Video understanding and generation]
+  AU --> SA[Speech and audio models]
+  L --> M[Multimodal systems]
+  CV --> M
+  VV --> M
+  SA --> M
+  M --> E[RAG, agents and AI application patterns]
+  E --> P[Project implementation and evidence]
+  P --> Q[Evaluation and portfolio]
+```
 
-| Module | What you will learn | Start here |
-|---|---|---|
-| 00 — Computer fundamentals | Data, binary, bits, bytes, computing and AI foundations | [Fundamentals](00-fundamentals/README.md) |
-| 01 — Data fundamentals | How text, images, audio and video are represented | [Data fundamentals](01-data-fundamentals/README.md) |
-| 02 — Data processing | Encoding, preprocessing, tokenization, tensors and embeddings | [Processing](02-data-processing/README.md) |
-| 03–04 — ML and deep learning | How models learn, neural networks, optimizers and Transformers | [Machine learning](03-machine-learning/README.md) |
-| 05 — Text AI and LLMs | NLP, tokenization, attention, GPT, training and inference | [Text AI](05-text-ai/README.md) |
-| 06 — Image AI | Pixels, image processing, CNNs and vision models | [Image AI](06-image-ai/README.md) |
-| 07 — Audio AI | Digital sound, speech recognition and speech generation | [Audio AI](07-audio-ai/README.md) |
-| 08 — Video AI | Frames, temporal information and video understanding | [Video AI](08-video-ai/README.md) |
-| 09 — Multimodal AI | VLMs, image-text alignment and multimodal architectures | [Multimodal AI](09-multimodal-ai/README.md) |
-| 11 — RAG | Parsing, chunking, embeddings, retrieval and grounded generation | [RAG](11-rag/README.md) |
-| 13 — AI engineering | Python, APIs, FastAPI, data stores, deployment and monitoring | [AI engineering](13-ai-engineering/README.md) |
-| 14 — Project portfolio | Architecture, implementation evidence, tests and lessons learned | [Projects](14-projects/README.md) |
+## Navigate the repo
 
-See the [complete roadmap](ROADMAP.md), [learning map](docs/LEARNING-MAP.md), [learning tracker](LEARNING-PROGRESS.md) and [glossary](GLOSSARY.md).
+| File/folder | Purpose |
+|---|---|
+| [TAXONOMY.md](TAXONOMY.md) | Ordered fundamentals and modality taxonomies, tagged Phase 1 or Later |
+| [PHASE-PLAN.md](PHASE-PLAN.md) | MVP scope and later expansion |
+| [NAMING-AND-CROSSLINKING.md](NAMING-AND-CROSSLINKING.md) | Naming, IDs, cross-links and evidence standards |
+| [concepts/](concepts/README.md) | One concept per page; explanations only |
+| [evidence/](evidence/README.md) | One project-to-concept evidence page per relationship |
+| [projects/](projects/README.md) | Owner-supplied project registry |
+| [templates/](templates/) | Shared concept and evidence templates |
 
-## Featured project: Tiny LLM on Jetson
+## Topic-to-project mapping
 
-This handbook is connected to the practical project: **[SEVT Logistics — tiny-llm-jetson](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson)**.
+The mapping below is a **candidate fit based only on the short project summaries supplied by the owner**. It is not evidence of implementation. All project details and proof remain `TODO: supply` until source material is provided and reviewed.
 
-The project README documents GPT-style model experiments at multiple scales, a Telugu-language model and a separate Telugu voice-assistant deployment.
+| Topic area | Tiny GPT — Jetson + Colab | Telugu voice assistant — STT/TTS | YODA — agentic workflows |
+|---|---|---|---|
+| Text representation / tokenization | Candidate fit; details `TODO: supply` | `TODO: supply` | `TODO: supply` |
+| Embeddings / sequence models | Candidate fit; details `TODO: supply` | `TODO: supply` | `TODO: supply` |
+| Transformers / LLMs | Candidate fit; details `TODO: supply` | Model/provider integration `TODO: supply` | `TODO: supply` |
+| Audio representation / preprocessing | `TODO: supply` | Candidate fit; details `TODO: supply` | `TODO: supply` |
+| STT / TTS | `TODO: supply` | Candidate fit; details `TODO: supply` | `TODO: supply` |
+| RAG / retrieval | `TODO: supply` | `TODO: supply` | `TODO: supply` |
+| Agents / tools / workflows | `TODO: supply` | `TODO: supply` | Candidate fit; details `TODO: supply` |
+| Multimodal I/O | `TODO: supply` | Candidate fit; exact modalities `TODO: supply` | `TODO: supply` |
 
-Useful entry points:
-- [Project overview and model progression](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson#readme)
-- [Tiny GPT implementation](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm.py)
-- [1M parameter experiment](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_1m.py)
-- [Telugu GPT implementation](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_telugu.py)
-- [Telugu model card](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/model-card-telugu.md)
-- [Tiny GPT checkpoint test](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/test_tiny_llm.py)
-- [Telugu voice API](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/telugu_voice_api.py)
-- [Compression experiments](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/tree/main/compression)
+Every confirmed mapping must link to an evidence page under `evidence/`; each evidence page must link back to its concept page. Never infer implementation from a project name or technology list.
 
-### Important project distinction
+## Repository structure
 
-The TinyGPT scripts implement and train small GPT-style models. The current telugu_voice_api.py uses the Google Gemini SDK for speech recognition, language response generation and speech output. Do not describe the deployed voice assistant as serving the locally trained TinyGPT checkpoint unless the integration is changed and verified.
+```text
+first-principles-ai/
+├── README.md
+├── TAXONOMY.md
+├── PHASE-PLAN.md
+├── NAMING-AND-CROSSLINKING.md
+├── concepts/
+│   ├── README.md
+│   ├── foundations/README.md
+│   ├── text/README.md
+│   ├── image/README.md
+│   ├── video/README.md
+│   ├── audio/README.md
+│   └── multimodal/README.md
+├── evidence/
+│   ├── README.md
+│   ├── foundations/README.md
+│   ├── text/README.md
+│   ├── image/README.md
+│   ├── video/README.md
+│   ├── audio/README.md
+│   └── multimodal/README.md
+├── projects/README.md
+└── templates/
+    ├── CONCEPT-PAGE-TEMPLATE.md
+    └── PROJECT-EVIDENCE-TEMPLATE.md
+```
 
-## How to use this handbook
+Modality folders contain pages directly; avoid nesting deeper than necessary.
 
-1. Start with [Lesson 01 — What Is Data?](00-fundamentals/01-what-is-data.md).
-2. Follow the diagrams and explain the flow aloud in your own words.
-3. Run the Python exercises and record your output.
-4. Open the linked project files and compare the theory with actual implementation.
-5. Complete the questions and exercises before moving forward.
-6. Use the [topic template](resources/templates/TOPIC-TEMPLATE.md) for every new lesson.
+## Non-negotiable rules
 
-## Documentation standard
+1. One technology per concept page.
+2. One project-to-concept relationship per evidence page.
+3. Keep concept explanations and project case studies separate.
+4. Link concept → all related evidence pages and evidence → its primary concept page.
+5. Use `TODO: supply` for unknown project details; do not invent them.
+6. Mark every topic Phase 1 or Later.
+7. Use Mermaid for editable diagrams when concept writing begins.
+8. Never publish credentials, customer data or confidential project material.
 
-Every topic aims to include a beginner-friendly definition, why it exists, internal working, Mermaid diagrams, terminology, worked examples, runnable Python, testing and limitations, project evidence, interview questions, exercises and trusted references.
+## Supplied project context
 
-## Evidence and accuracy rules
+- Tiny GPT-style LLM training on Jetson + Colab.
+- Telugu voice assistant (STT/TTS pipeline).
+- YODA agentic workflow system.
 
-A topic appearing in this handbook does not automatically mean it was implemented in a project. Project claims must point to an actual source file, function, configuration, test or model card. Label unverified items as **To verify**. Never publish credentials, confidential customer data or proprietary material.
+Architecture, contributions, stack, decisions, results, failures and metrics are all `TODO: supply` until provided.
 
-**Learn the fundamentals. Understand the architecture. Build the technology. Document the evidence.**
+## Next step
+
+Answer the five Phase 2 questions in the setup conversation. Then concept/evidence pairs can be written in taxonomy order, starting with first-principles foundations and Text.
