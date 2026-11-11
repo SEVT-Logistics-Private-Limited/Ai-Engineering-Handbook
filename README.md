@@ -39,32 +39,30 @@ Using LLMs      Prompt Engineering → Hallucination → Tokenization
 
 ## Topics
 
-✅ = used in our project (each page has an **"In our project"** section explaining how)
-
-| # | Topic | In one line | In our project |
-|---|---|---|---|
-| 1 | [CPU](docs/01-cpu.md) | Executes instructions, step by step | ✅ |
-| 2 | [GPU](docs/02-gpu.md) | Many calculations in parallel, built for images, video and AI | ✅ |
-| 3 | [Binary](docs/03-binary.md) | 0s and 1s, bits and bytes | ✅ |
-| 4 | [Image](docs/04-image.md) | Pixels and RGB values | – |
-| 5 | [Image Resolution](docs/05-image-resolution.md) | Width × height in pixels | – |
-| 6 | [Video](docs/06-video.md) | Images played continuously | – |
-| 7 | [Frame](docs/07-frame.md) | One image inside a video | – |
-| 8 | [FPS](docs/08-fps.md) | Frames shown per second | – |
-| 9 | [NLP](docs/09-nlp.md) | AI that understands human language | ✅ |
-| 10 | [VLM](docs/10-vlm.md) | Sees and understands (image + text) | – |
-| 11 | [VLA](docs/11-vla.md) | Sees, understands and acts | – |
-| 12 | [LLM](docs/12-llm.md) | Trained on huge text to understand and generate language | ✅ |
-| 13 | [ROS](docs/13-ros.md) | Connects and coordinates a robot's parts | – |
-| 14 | [RAG](docs/14-rag.md) | Retrieve documents, then let the LLM answer | ✅ |
-| 15 | [API](docs/15-api.md) | How two software systems talk: request → response | ✅ |
-| 16 | [FastAPI](docs/16-fastapi.md) | Build APIs in Python | ✅ |
-| 17 | [ML](docs/17-ml.md) | Systems that learn patterns from data | ✅ |
-| 18 | [DL](docs/18-dl.md) | Multi-layer neural networks; epochs, batches, training | ✅ |
-| 19 | [Transformers](docs/19-transformers.md) | The architecture behind LLMs: attention, Q/K/V, masking | ✅ |
-| 20 | [Prompt Engineering](docs/20-prompt-engineering.md) | Zero/one/few-shot, chain of thought, role prompting | ✅ |
-| 21 | [Hallucination](docs/21-hallucination.md) | When an LLM makes things up, and how to reduce it | ✅ |
-| 22 | [Tokenization](docs/22-tokenization.md) | Text → tokens → token IDs | ✅ |
+| # | Topic | In one line |
+|---|---|---|
+| 1 | [CPU](docs/01-cpu.md) | Executes instructions, step by step |
+| 2 | [GPU](docs/02-gpu.md) | Many calculations in parallel, built for images, video and AI |
+| 3 | [Binary](docs/03-binary.md) | 0s and 1s, bits and bytes |
+| 4 | [Image](docs/04-image.md) | Pixels and RGB values |
+| 5 | [Image Resolution](docs/05-image-resolution.md) | Width × height in pixels |
+| 6 | [Video](docs/06-video.md) | Images played continuously |
+| 7 | [Frame](docs/07-frame.md) | One image inside a video |
+| 8 | [FPS](docs/08-fps.md) | Frames shown per second |
+| 9 | [NLP](docs/09-nlp.md) | AI that understands human language |
+| 10 | [VLM](docs/10-vlm.md) | Sees and understands (image + text) |
+| 11 | [VLA](docs/11-vla.md) | Sees, understands and acts |
+| 12 | [LLM](docs/12-llm.md) | Trained on huge text to understand and generate language |
+| 13 | [ROS](docs/13-ros.md) | Connects and coordinates a robot's parts |
+| 14 | [RAG](docs/14-rag.md) | Retrieve documents, then let the LLM answer |
+| 15 | [API](docs/15-api.md) | How two software systems talk: request → response |
+| 16 | [FastAPI](docs/16-fastapi.md) | Build APIs in Python |
+| 17 | [ML](docs/17-ml.md) | Systems that learn patterns from data |
+| 18 | [DL](docs/18-dl.md) | Multi-layer neural networks; epochs, batches, training |
+| 19 | [Transformers](docs/19-transformers.md) | The architecture behind LLMs: attention, Q/K/V, masking |
+| 20 | [Prompt Engineering](docs/20-prompt-engineering.md) | Zero/one/few-shot, chain of thought, role prompting |
+| 21 | [Hallucination](docs/21-hallucination.md) | When an LLM makes things up, and how to reduce it |
+| 22 | [Tokenization](docs/22-tokenization.md) | Text → tokens → token IDs |
 
 See the full mapping in [Topics covered in this project](projects/telugu-voice-assistant/README.md#topics-covered-in-this-project).
 
