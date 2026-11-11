@@ -1,4 +1,4 @@
-# 10. VLM (Vision Language Model)
+# 9. VLM (Vision Language Model)
 
 > A VLM is an AI model that can understand visual information and connect it with human language. It sees and understands.
 
@@ -74,4 +74,4 @@ The LLM we use (Gemini) can also accept images, so adding photo questions later 
 
 ---
 
-**Previous:** [← NLP](09-nlp.md) · [Home](../README.md) · **Next:** [VLA →](11-vla.md)
+**Previous:** [← NLP](08-nlp.md) · [Home](../README.md) · **Next:** [VLA →](10-vla.md)

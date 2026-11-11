@@ -1,4 +1,4 @@
-# 14. RAG (Retrieval-Augmented Generation)
+# 13. RAG (Retrieval-Augmented Generation)
 
 > RAG is an approach that combines information retrieval with an LLM to generate answers.
 
@@ -130,4 +130,4 @@ Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limit
 
 ---
 
-**Previous:** [← ROS](13-ros.md) · [Home](../README.md) · **Next:** [API →](15-api.md)
+**Previous:** [← ROS](12-ros.md) · [Home](../README.md) · **Next:** [API →](14-api.md)

@@ -1,4 +1,4 @@
-# 4. Image
+# 3. Image
 
 > An image is a visual representation of something we see in the real world. To a computer, it's a grid of pixels, and each pixel is a set of numbers.
 
@@ -61,14 +61,14 @@ Processed image ← Image processing ← Image as an array
 - Photo editing and filters
 - Face recognition
 - Medical images (X-ray, MRI)
-- Input for AI models that understand images ([VLM](10-vlm.md))
+- Input for AI models that understand images ([VLM](09-vlm.md))
 
 ## In our project
 
 **Not used yet.** Our project works with voice and text only, so it doesn't process images yet.
 
-A natural next step would be letting a user send a photo (for example, of a dashboard warning light) and answering about it with a [VLM](10-vlm.md).
+A natural next step would be letting a user send a photo (for example, of a dashboard warning light) and answering about it with a [VLM](09-vlm.md).
 
 ---
 
-**Previous:** [← Binary](03-binary.md) · [Home](../README.md) · **Next:** [Image Resolution →](05-image-resolution.md)
+**Previous:** [← GPU](02-gpu.md) · [Home](../README.md) · **Next:** [Image Resolution →](04-image-resolution.md)

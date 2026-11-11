@@ -1,10 +1,10 @@
-# 16. FastAPI
+# 15. FastAPI
 
 > FastAPI is a Python framework for building REST APIs quickly.
 
 ## Introduction
 
-Once you understand what an [API](15-api.md) is, the next question is how to build one. In Python, a popular choice is **FastAPI**. Our voice assistant is built with it.
+Once you understand what an [API](14-api.md) is, the next question is how to build one. In Python, a popular choice is **FastAPI**. Our voice assistant is built with it.
 
 ## What is it?
 
@@ -83,4 +83,4 @@ Live docs: [`/docs`](https://telugu-voice-app.gentletree-f4002f64.southindia.azu
 
 ---
 
-**Previous:** [← API](15-api.md) · [Home](../README.md) · **Next:** [ML →](17-ml.md)
+**Previous:** [← API](14-api.md) · [Home](../README.md) · **Next:** [ML →](16-ml.md)

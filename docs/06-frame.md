@@ -1,4 +1,4 @@
-# 7. Frame
+# 6. Frame
 
 > A frame is a single individual image inside a video.
 
@@ -22,7 +22,7 @@ Frames are the building blocks of video. AI models that understand video usually
 
 - A video is a sequence of frames.
 - Each frame is an image, so it's made of pixels, and each pixel has RGB values.
-- Frames are shown one after another at a fixed speed, measured in [FPS](08-fps.md).
+- Frames are shown one after another at a fixed speed, measured in [FPS](07-fps.md).
 
 ## Flow diagram
 
@@ -46,4 +46,4 @@ Video  =  Frame 1 → Frame 2 → Frame 3 → Frame 4 → ...
 
 ---
 
-**Previous:** [← Video](06-video.md) · [Home](../README.md) · **Next:** [FPS →](08-fps.md)
+**Previous:** [← Video](05-video.md) · [Home](../README.md) · **Next:** [FPS →](07-fps.md)

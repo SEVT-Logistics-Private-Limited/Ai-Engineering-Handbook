@@ -1,4 +1,4 @@
-# 15. API (Application Programming Interface)
+# 14. API (Application Programming Interface)
 
 > An API is a medium that lets two software systems communicate. You send a request to the API and get a response.
 
@@ -122,4 +122,4 @@ Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limit
 
 ---
 
-**Previous:** [← RAG](14-rag.md) · [Home](../README.md) · **Next:** [FastAPI →](16-fastapi.md)
+**Previous:** [← RAG](13-rag.md) · [Home](../README.md) · **Next:** [FastAPI →](15-fastapi.md)

@@ -1,4 +1,4 @@
-# 6. Video
+# 5. Video
 
 > A video is a collection of images played continuously.
 
@@ -54,4 +54,4 @@ RGB values
 
 ---
 
-**Previous:** [← Image Resolution](05-image-resolution.md) · [Home](../README.md) · **Next:** [Frame →](07-frame.md)
+**Previous:** [← Image Resolution](04-image-resolution.md) · [Home](../README.md) · **Next:** [Frame →](06-frame.md)

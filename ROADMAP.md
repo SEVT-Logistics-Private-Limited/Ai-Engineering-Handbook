@@ -2,7 +2,7 @@
 
 ## Covered
 
-CPU · GPU · Binary · Image · Image Resolution · Video · Frame · FPS · NLP · VLM · VLA · LLM · ROS · RAG · API · FastAPI · ML · DL · Transformers · Prompt Engineering · Hallucination · Tokenization
+CPU (including binary) · GPU · Image · Image Resolution · Video · Frame · FPS · NLP · VLM · VLA · LLM · ROS · RAG · API · FastAPI · ML · DL · Transformers · Prompt Engineering · Hallucination · Tokenization
 
 ## Next
 

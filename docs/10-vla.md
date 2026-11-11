@@ -1,10 +1,10 @@
-# 11. VLA (Vision Language Action)
+# 10. VLA (Vision Language Action)
 
 > A VLA helps AI-powered robots understand their surroundings, follow instructions and perform physical actions. It sees, understands and acts.
 
 ## Introduction
 
-A [VLM](10-vlm.md) can describe what it sees, but it can't do anything about it. A VLA goes one step further: it **acts**.
+A [VLM](09-vlm.md) can describe what it sees, but it can't do anything about it. A VLA goes one step further: it **acts**.
 
 ## What is it?
 
@@ -71,4 +71,4 @@ Robot picks up the bottle
 
 ---
 
-**Previous:** [← VLM](10-vlm.md) · [Home](../README.md) · **Next:** [LLM →](12-llm.md)
+**Previous:** [← VLM](09-vlm.md) · [Home](../README.md) · **Next:** [LLM →](11-llm.md)
