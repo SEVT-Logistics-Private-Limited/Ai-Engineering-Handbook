@@ -1,32 +1,16 @@
 # Roadmap
 
+[Home](README.md)
+
 ## Covered
 
-CPU (including binary) · GPU · Image · Image Resolution · Video · Frame · FPS · NLP · VLM · VLA · LLM · ROS · RAG · API · FastAPI · ML · DL · Transformers · Prompt Engineering · Hallucination · Tokenization
+All 21 topics are complete: [see the topic list](README.md#topics).
 
-## Next
+## Planned
 
-### Audio
-- [ ] How sound becomes numbers
-- [ ] Speech to text and text to speech
-
-### Computer basics
-- [ ] DLD (Digital Logic Design)
-- [ ] Operating system and kernel
-- [ ] High-level vs low-level languages
-- [ ] Embedded systems
-
-### Programming
-- [ ] Python
-- [ ] C / C++
-- [ ] Java
-
-### AI
-- [ ] Open models (DeepSeek, Llama, Qwen)
-- [ ] Tools and skills for LLMs
-- [ ] AI agents and automation
-- [ ] RPA (Robotic Process Automation)
-
----
-
-[Home](README.md)
+| Area | Topics |
+|---|---|
+| **Audio** | How sound becomes numbers · Speech to text and text to speech |
+| **Computer basics** | Digital logic design (DLD) · Operating system and kernel · High-level vs low-level languages · Embedded systems |
+| **Programming** | Python · C and C++ · Java |
+| **AI** | Open models (DeepSeek, Llama, Qwen) · Tools and skills for LLMs · AI agents and automation · RPA (Robotic Process Automation) |
