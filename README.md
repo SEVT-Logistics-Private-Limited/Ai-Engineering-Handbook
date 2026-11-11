@@ -2,11 +2,15 @@
 
 # My AI Engineering Journey
 
-**A structured, step-by-step guide to AI, from computer fundamentals to LLMs, RAG and robotics, grounded in a live production project.**
+**A structured guide to AI engineering, from computer fundamentals to LLMs, RAG and robotics, applied in a live production project.**
+
+![Topics](https://img.shields.io/badge/topics-21-2563eb)
+![Applied in project](https://img.shields.io/badge/applied%20in%20project-13%20of%2021-16a34a)
+![Deployed on](https://img.shields.io/badge/deployed%20on-Azure-0078d4)
 
 Yodha AI · SEVT Logistics Private Limited
 
-[Topics](#topics) · [Live Project](#featured-project-telugu-voice-ai-assistant) · [Learning Path](#learning-path) · [Roadmap](ROADMAP.md)
+[Topics](#topics) · [Featured Project](#featured-project) · [Learning Path](#learning-path) · [Roadmap](ROADMAP.md)
 
 </div>
 
@@ -14,35 +18,22 @@ Yodha AI · SEVT Logistics Private Limited
 
 ## Overview
 
-This repository explains the core concepts behind modern AI in a simple, consistent format. Each topic is one short page with a clear explanation and a flow diagram, and is linked to how the topic is applied in our live **Telugu Voice AI Assistant**.
+Each topic is a short, consistent page: a clear explanation, a flow diagram, and how the concept is applied in our live **Telugu Voice AI Assistant**.
 
 | At a glance | Detail |
 |---|---|
-| **Topics covered** | 21, across 6 areas |
-| **Applied in production** | 13 of the 21 topics are used in our live project |
-| **Live project** | [Telugu Voice AI Assistant](projects/telugu-voice-assistant/README.md), deployed on Azure |
+| **Topics** | 21, grouped into 6 areas |
+| **Applied in our project** | 13 of the 21 topics |
+| **Page format** | Introduction · Definition · Rationale · Mechanism · Flow diagram · Use cases · Application in our project |
+| **Featured project** | [Telugu Voice AI Assistant](projects/telugu-voice-assistant/README.md), deployed on Azure Container Apps |
 | **Author** | Rishi Sasanala |
-
-## How each topic is structured
-
-Every topic page follows the same seven-part layout, so any page can be read on its own:
-
-| # | Section | Purpose |
-|---|---|---|
-| 1 | Introduction | Context for the topic |
-| 2 | What is it? | Definition |
-| 3 | Why is it needed? | The problem it solves |
-| 4 | How does it work? | Explanation with examples |
-| 5 | Flow diagram | Visual summary |
-| 6 | Real-world use cases | Where it is used in industry |
-| 7 | In our project | How we applied it in the Telugu Voice AI Assistant |
 
 ## Learning path
 
-Topics are designed to be read in order. Each one builds on the previous one.
+Topics are designed to be read in order. Each builds on the previous one.
 
 ```text
-Hardware                       CPU → GPU   (including binary)
+Hardware                       CPU → GPU
                                      ↓
 Images and video               Image → Image Resolution → Video → Frame → FPS
                                      ↓
@@ -61,12 +52,12 @@ LLMs                           Prompt Engineering → Hallucination → Tokeniza
 
 | # | Topic | Summary |
 |---|---|---|
-| 1 | [CPU](docs/01-cpu.md) | Executes instructions step by step; binary (0s and 1s, bits and bytes); how far LLM training can go on a CPU |
-| 2 | [GPU](docs/02-gpu.md) | Many calculations in parallel; 32-bit vs 16-bit numbers; how far we trained and how much of the GPU we used |
+| 1 | [CPU](docs/01-cpu.md) | Step-by-step processing, binary, and how far LLM training can go on a CPU |
+| 2 | [GPU](docs/02-gpu.md) | Parallel processing, number formats, and how far we trained on a GPU |
 
 ### Images and video
 
-Computers can't see pictures, only numbers. This section shows how an image is stored as a grid of pixels, where each pixel holds red, green and blue values, and how resolution decides how much detail an image keeps. It then builds up to video: a sequence of images (frames) shown at a fixed speed (FPS). These basics explain how AI models are able to "see".
+Computers cannot see pictures, only numbers. This section shows how an image is stored as a grid of pixels, where each pixel holds red, green and blue values, and how resolution decides how much detail an image keeps. It then builds up to video: a sequence of images (frames) shown at a fixed speed (FPS). These basics explain how AI models are able to "see".
 
 | # | Topic | Summary |
 |---|---|---|
@@ -92,7 +83,7 @@ Computers can't see pictures, only numbers. This section shows how an image is s
 |---|---|---|
 | 13 | [RAG](docs/13-rag.md) | Retrieve documents, then let the LLM answer |
 | 14 | [API](docs/14-api.md) | How two software systems talk: request → response |
-| 15 | [FastAPI](docs/15-fastapi.md) | Build APIs in Python |
+| 15 | [FastAPI](docs/15-fastapi.md) | Building APIs in Python |
 
 ### Machine learning foundations
 
@@ -110,9 +101,9 @@ Computers can't see pictures, only numbers. This section shows how an image is s
 | 20 | [Hallucination](docs/20-hallucination.md) | When an LLM makes things up, and how to reduce it |
 | 21 | [Tokenization](docs/21-tokenization.md) | Text → tokens → token IDs |
 
-## Featured project: Telugu Voice AI Assistant
+## Featured project
 
-A voice assistant that listens in Telugu, answers vehicle questions from the vehicle manuals using RAG, and replies in Telugu speech.
+**Telugu Voice AI Assistant.** A voice assistant that listens in Telugu, grounds its answers in vehicle manuals using Retrieval-Augmented Generation (RAG), and replies in spoken Telugu.
 
 ```text
 User speaks (Telugu)
@@ -132,9 +123,9 @@ Text to speech (FastAPI: POST /tts)
 User hears the answer
 ```
 
-| | |
+| Resource | Link |
 |---|---|
-| **Project details** | [Telugu Voice AI Assistant](projects/telugu-voice-assistant/README.md) |
+| **Project overview** | [Telugu Voice AI Assistant](projects/telugu-voice-assistant/README.md) |
 | **Topic-by-topic mapping** | [Topics covered in this project](projects/telugu-voice-assistant/README.md#topics-covered-in-this-project) |
 | **Live application** | [Open the assistant](https://telugu-voice-app.gentletree-f4002f64.southindia.azurecontainerapps.io/assistant) |
 | **Source code** | [tiny-llm-jetson](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson) |
@@ -143,14 +134,8 @@ User hears the answer
 
 ```text
 .
-├── docs/                        # 21 topic pages, numbered in reading order
-├── projects/
-│   └── telugu-voice-assistant/  # Project write-up and screenshots
-├── assets/images/               # Images used in the topic pages
-├── ROADMAP.md                   # Covered and planned topics
-└── README.md
+├── docs/         21 topic pages, numbered in reading order
+├── projects/     Telugu Voice AI Assistant write-up and screenshots
+├── assets/       Images used in the topic pages
+└── ROADMAP.md    Covered and planned topics
 ```
-
-## Roadmap
-
-See [ROADMAP.md](ROADMAP.md) for the topics planned next.

@@ -1,8 +1,8 @@
 # Project: Telugu Voice AI Assistant (Yodha)
 
-> A voice assistant that listens in Telugu, answers vehicle questions using the vehicle manuals, and replies out loud in Telugu.
+> A voice assistant that listens in Telugu, grounds its answers in vehicle manuals using RAG, and replies in spoken Telugu.
 
-| | |
+| Resource | Link |
 |---|---|
 | **Live app** | [Open the assistant](https://telugu-voice-app.gentletree-f4002f64.southindia.azurecontainerapps.io/assistant) |
 | **API docs** | [`/docs`](https://telugu-voice-app.gentletree-f4002f64.southindia.azurecontainerapps.io/docs) |
@@ -22,9 +22,11 @@ The user speaks a question in Telugu. The assistant understands it, finds the re
 ## How it works
 
 ```text
-User speaks (query raised)
+User speaks (Telugu)
         ↓
-Speech to text (FastAPI: POST)
+Speech to text
+        ↓
+FastAPI server receives the question
         ↓
 Translate the query (Telugu text → English)
         ↓
@@ -39,11 +41,11 @@ User hears the answer
 
 | Step | What happens | Topic |
 |---|---|---|
-| Speech to text | Telugu speech becomes Telugu text | Not yet |
+| Speech to text | Telugu speech becomes Telugu text | Audio (planned) |
 | Translate the query | Telugu → English, because the manuals are in English | [LLM](../../docs/11-llm.md) |
 | Retrieve from ChromaDB | Find the manual section that matches the question | [RAG](../../docs/13-rag.md) |
 | LLM generates the answer | Gemini answers using the manual section, as "Yodha" | [LLM](../../docs/11-llm.md), [Prompt Engineering](../../docs/19-prompt-engineering.md) |
-| Text to speech | The Telugu answer becomes audio | Not yet |
+| Text to speech | The Telugu answer becomes audio | Audio (planned) |
 
 ## System overview
 
@@ -85,6 +87,8 @@ Image stored in Azure Container Registry
         ↓
 Azure Container Apps runs the live app
 ```
+
+Manual retrieval (RAG) reads a ChromaDB volume attached to the container. The service reports the state of that volume at `GET /` (`"kb": "loaded"` or `"kb": "disabled"`), so it can be verified after each deployment.
 
 ## In-house Telugu language model
 
