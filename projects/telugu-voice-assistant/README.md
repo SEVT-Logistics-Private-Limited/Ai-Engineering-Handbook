@@ -28,9 +28,9 @@ Speech to text (FastAPI: POST)
         ↓
 Translate the query (Telugu text → English)
         ↓
-Retrieve from ChromaDB (vehicle manuals)
+RAG: retrieve the matching section from ChromaDB (vehicle manuals)
         ↓
-LLM generates the answer
+LLM (Gemini) generates the answer using the manual section
         ↓
 Text to speech (FastAPI: POST /tts)
         ↓
