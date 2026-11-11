@@ -47,6 +47,26 @@ NLP  →  helps the computer  →  understand  →  process  →  work with huma
 - Chatbots and customer support
 - Spam detection
 
+## In our project
+
+**Used. The whole assistant is an NLP system:** it understands Telugu requests and replies in Telugu.
+
+| NLP task | How we do it |
+|---|---|
+| **Understand speech** | Telugu speech → Telugu text (browser speech recognition, `te-IN`, with Gemini as backup) |
+| **Recognise simple requests** | Exact keyword matching for time, date and greetings (`సమయం`, `తేదీ`, `నమస్కారం`…), answered instantly without the LLM |
+| **Translate** | Telugu question → English, so it can be matched against the English vehicle manuals |
+| **Understand and answer** | The LLM reads the question and generates a Telugu answer |
+| **Clean the text** | Remove symbols (`*`, `#`), list numbers and English-only lines so speech sounds natural |
+| **Detect the language** | Count Telugu characters (Unicode range `ఀ`–`౿`). If the answer has almost no Telugu, reply "మళ్ళీ చెప్పగలరా?" ("Can you say that again?") |
+
+```text
+"ఇప్పుడు సమయం?" (what's the time?) → keyword match → instant answer
+"ఇంజిన్ ఆయిల్ ఎప్పుడు మార్చాలి?" (when to change engine oil?) → translate → RAG → LLM → Telugu answer
+```
+
+Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py) (functions `check_instant`, `gemini_translate`, `clean_for_tts`)
+
 ## Key takeaways
 
 - NLP = the branch of AI for human language (text).

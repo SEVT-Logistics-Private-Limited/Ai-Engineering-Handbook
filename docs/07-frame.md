@@ -40,6 +40,10 @@ Video  =  Frame 1 → Frame 2 → Frame 3 → Frame 4 → ...
 - Thumbnails on YouTube
 - AI video analysis: picking a few frames per second to analyse
 
+## In our project
+
+**Not used yet.** Our project works with voice and text only, so it doesn't process video frames yet.
+
 ## Key takeaways
 
 - A frame = one image inside a video.

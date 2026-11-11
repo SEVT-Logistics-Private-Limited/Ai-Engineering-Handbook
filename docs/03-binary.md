@@ -74,6 +74,26 @@ Electrical signals (OFF / ON)
 - Memory and storage sizes (GB, TB)
 - Internet data transfer (bits per second)
 
+## In our project
+
+**Used, in two places.**
+
+**1. Sending audio over the API.** Audio is binary data (bytes), but the API sends JSON, which is text. So audio bytes are converted to **base64** text, and back again. This happens when the browser can't do speech recognition itself and uploads the recording instead:
+
+```text
+Browser records voice (binary bytes)
+        ↓
+Encode to base64 text → sent in JSON as "audio_base64"
+        ↓
+Server decodes base64 → original audio bytes → speech to text
+```
+
+The spoken answer comes back the same way: audio bytes → base64 → browser → played.
+
+**2. Saving model files smaller.** Big models were saved as **bf16 (16 bits per number)** instead of 32 bits, so the 3B model's checkpoint is about **6 GB** instead of 12 GB. The compression experiments go further: weights become -1, 0 or +1 and are packed **4 numbers into 1 byte** (2 bits each).
+
+Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py) (`base64.b64decode`, `base64.b64encode`), [`tiny_llm_3b.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_3b.py) (bf16 save)
+
 ## Key takeaways
 
 - Binary uses only 0 and 1. 0 = OFF, 1 = ON.

@@ -56,9 +56,25 @@ Question → RAG (real documents) + better prompt + low temperature → LLM → 
 - Medical and legal assistants must give correct facts
 - Vehicle assistants must not invent service details
 
-**In my project:** the voice assistant reduces hallucination in two ways:
-- Its prompt tells it **not to imagine unknown facts**, and to say it doesn't know.
-- **RAG** gives it the real vehicle manual to answer from.
+## In our project
+
+**Used. The assistant has four protections against hallucination:**
+
+| Protection | How it works in our code | Mitigation from this page |
+|---|---|---|
+| **"Don't imagine" rule** | The prompt says: if you don't know, say so; don't imagine | Better prompts |
+| **Live-data rule** | For cricket scores, weather and news, reply "అది నాకు live గా తెలియదు మిత్రమా" ("I don't know that live") | Better prompts |
+| **RAG** | Answers about vehicles use the real manual passage | RAG, source grounding |
+| **Relevance check** | A manual passage is used only if it's close enough (distance ≤ 0.35), so unrelated text isn't used | Validation |
+| **Output check** | If the answer has fewer than 3 Telugu characters, reply "మళ్ళీ చెప్పగలరా?" ("Can you say that again?") instead | Validation |
+
+```text
+Question about live cricket score → prompt rule → "I don't know that live"
+Question about engine oil         → RAG finds the manual → grounded answer
+Answer comes back in English only → output check → "Can you say that again?"
+```
+
+Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py) (functions `build_system`, `retrieve_manual_context`, `clean_for_tts`)
 
 ## Key takeaways
 

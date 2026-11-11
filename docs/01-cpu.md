@@ -51,6 +51,24 @@ Image / Sentence / Audio
 - Small games (Road Dash, card games)
 - Controlling the GPU and other hardware
 
+## In our project
+
+**Used.** The live voice assistant runs on **CPU-based cloud servers**. No GPU is needed in production.
+
+| Where | How the CPU is used |
+|---|---|
+| Azure server (first version: Azure VM *Standard D2s v3*, CPU only) | Ran the FastAPI server |
+| Azure Container Apps (current) | Runs the FastAPI server inside a Docker container |
+| Embedding model `multilingual-e5-small` | Runs on the server's CPU to turn questions into numbers for RAG |
+
+**Why no GPU in production?** The heaviest work, generating answers with the LLM, happens on **Google Gemini's** servers. Our server only handles requests, small embeddings and text cleanup, which a CPU does well.
+
+```text
+User request → Azure server (CPU) → calls Gemini (Google's GPUs) → CPU cleans the answer → response
+```
+
+Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py)
+
 ## Key takeaways
 
 - A computer only understands numbers.

@@ -48,6 +48,10 @@ Frame 1 → Frame 2 → Frame 3 → ... → Frame 30
 - Gaming and smooth video (60–120 FPS)
 - Slow-motion video (recorded at high FPS)
 
+## In our project
+
+**Not used yet.** Our project works with voice and text only, so it doesn't process video yet.
+
 ## Key takeaways
 
 - FPS = frames displayed per second.

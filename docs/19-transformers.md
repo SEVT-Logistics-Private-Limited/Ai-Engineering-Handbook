@@ -155,12 +155,36 @@ Multi-head attention:
 - Text classification and sentiment analysis
 - Image understanding (Vision Transformers in [VLMs](10-vlm.md))
 
-**In my project:** my Telugu language model is a Transformer with:
-- **Transformer layers: 8**
-- **Attention heads: 8**
-- **Context length: 128** (the maximum number of tokens the model can process together in one input)
+## In our project
 
-Code: [`tiny_llm_telugu.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_telugu.py)
+**Used, in three places.**
+
+**1. Our own Telugu Transformer (built from scratch):**
+
+| Setting | Value | Meaning |
+|---|---|---|
+| Transformer layers | **8** | One layer processes the input, then the next processes the updated result |
+| Attention heads | **8** | 8 attention operations in parallel |
+| Context length | **128** | Max tokens processed together in one input |
+| Embedding size | 512 | Each token becomes a vector of 512 numbers |
+| Type | Decoder-only (like GPT) | Generates text one token at a time |
+
+How the parts on this page appear in our code:
+- **Embeddings:** a token embedding table plus a position embedding table (positional encoding)
+- **Self-attention + feed-forward:** inside every layer (`Block` class)
+- **Masking:** a causal mask (`torch.triu`) hides future tokens, the exam example in code
+- The same `Block` was reused for every model from **984 parameters to 3 billion**
+
+**2. The embedding model for RAG** (`multilingual-e5-small`) is a Transformer **encoder**. It *understands* the question and turns it into a vector.
+
+**3. Gemini** is a large Transformer that *generates* the answers.
+
+```text
+Encoder (understands): multilingual-e5-small → question becomes a vector for search
+Decoder (generates):   Gemini and our Telugu GPT → write the answer token by token
+```
+
+Code: [`tiny_llm_telugu.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_telugu.py), [`tiny_llm.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm.py)
 
 ## Key takeaways
 

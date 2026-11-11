@@ -65,6 +65,10 @@ Robot picks up the bottle
 - Household robots
 - Robotic arms in factories
 
+## In our project
+
+**Not used yet.** Our project is a voice assistant, not a robot. It answers questions but doesn't perform physical actions.
+
 ## Key takeaways
 
 - VLA = Vision + Language + Action.

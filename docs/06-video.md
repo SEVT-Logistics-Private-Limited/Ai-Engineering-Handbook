@@ -48,6 +48,10 @@ RGB values
 - Video calls
 - Self-driving cars (cameras record video all the time)
 
+## In our project
+
+**Not used yet.** Our project works with voice and text only, so it doesn't process video yet.
+
 ## Key takeaways
 
 - Video = a collection of frames played continuously.

@@ -89,19 +89,44 @@ Vector database
 - Searching internal company knowledge
 - Assistants that answer from manuals
 
-**In my project:** the Telugu voice assistant uses RAG to answer vehicle questions from **vehicle manuals**:
+## In our project
+
+**Used. This is the core of the assistant:** it answers vehicle questions from **vehicle manuals**.
+
+| RAG part | What we used |
+|---|---|
+| Documents | Vehicle manuals |
+| Embedding model | `intfloat/multilingual-e5-small` |
+| Vector database | **ChromaDB** (collection `vehicle_manuals`) |
+| Results used | The **1** closest chunk (`n_results=1`) |
+| Relevance check | Only used if the distance is **≤ 0.35** (close enough) |
+| LLM | Google Gemini |
 
 ```text
-User asks in Telugu
+User asks in Telugu: "ఇంజిన్ ఆయిల్ ఎప్పుడు మార్చాలి?"
         ↓
-Translate the query (Telugu → English)
+Translate to English: "When should I change the engine oil?"
         ↓
-Retrieve from ChromaDB (vehicle manuals)
+Embedding (multilingual-e5-small, with "query:" prefix)
         ↓
-LLM generates the answer (in Telugu)
+Search ChromaDB (vehicle_manuals)
+        ↓
+Closest chunk close enough? (distance ≤ 0.35)
+   ├── yes → add the manual text + source to the prompt
+   └── no  → answer without the manual
+        ↓
+Gemini answers in Telugu
         ↓
 User hears the answer
 ```
+
+Details:
+- The question is translated first because the **manuals are in English**.
+- The manual passage is limited to **1,200 characters** to keep the prompt small.
+- The database loads in the **background** when the server starts, so the app works even if the database isn't available.
+- `GET /` reports `"kb": "loaded"` or `"kb": "disabled"`, so we can check whether RAG is active.
+
+Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py) (functions `_load_kb`, `retrieve_manual_context`, `build_system`)
 
 ## Key takeaways
 
