@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Once you understand what an [API](15-api.md) is, the next question is how to build one. In Python, a popular choice is **FastAPI**. It's what my voice assistant is built with.
+Once you understand what an [API](15-api.md) is, the next question is how to build one. In Python, a popular choice is **FastAPI**. Our voice assistant is built with it.
 
 ## What is it?
 
