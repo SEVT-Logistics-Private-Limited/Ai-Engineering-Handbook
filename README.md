@@ -1,6 +1,6 @@
 <div align="center">
 
-# AI Engineering Handbook
+# My-Ai-Engineering-Handbook
 
 **A structured, step-by-step guide to AI, from computer fundamentals to LLMs, RAG and robotics, grounded in a live production project.**
 
