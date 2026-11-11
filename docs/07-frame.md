@@ -44,11 +44,6 @@ Video  =  Frame 1 → Frame 2 → Frame 3 → Frame 4 → ...
 
 **Not used yet.** Our project works with voice and text only, so it doesn't process video frames yet.
 
-## Key takeaways
-
-- A frame = one image inside a video.
-- Image = 1 photograph, frame = one image inside a video.
-
 ---
 
 **Previous:** [← Video](06-video.md) · [Home](../README.md) · **Next:** [FPS →](08-fps.md)

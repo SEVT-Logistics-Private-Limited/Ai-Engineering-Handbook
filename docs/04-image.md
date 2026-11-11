@@ -69,12 +69,6 @@ Processed image ← Image processing ← Image as an array
 
 A natural next step would be letting a user send a photo (for example, of a dashboard warning light) and answering about it with a [VLM](10-vlm.md).
 
-## Key takeaways
-
-- An image is made of millions of tiny squares called pixels.
-- Each pixel has 3 numbers (R, G, B), each from 0 to 255.
-- Computer path: image → decode → pixels → array → processing.
-
 ---
 
 **Previous:** [← Binary](03-binary.md) · [Home](../README.md) · **Next:** [Image Resolution →](05-image-resolution.md)

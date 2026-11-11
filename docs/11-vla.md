@@ -69,12 +69,6 @@ Robot picks up the bottle
 
 **Not used yet.** Our project is a voice assistant, not a robot. It answers questions but doesn't perform physical actions.
 
-## Key takeaways
-
-- VLA = Vision + Language + Action.
-- It sees, understands and acts.
-- A VLM only describes. A VLA actually does the task.
-
 ---
 
 **Previous:** [← VLM](10-vlm.md) · [Home](../README.md) · **Next:** [LLM →](12-llm.md)

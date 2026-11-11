@@ -67,12 +67,6 @@ NLP  →  helps the computer  →  understand  →  process  →  work with huma
 
 Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py) (functions `check_instant`, `gemini_translate`, `clean_for_tts`)
 
-## Key takeaways
-
-- NLP = the branch of AI for human language (text).
-- It helps computers understand what you ask, what action you want, and what information is needed.
-- In short, NLP helps computers understand and work with human language.
-
 ---
 
 **Previous:** [← FPS](08-fps.md) · [Home](../README.md) · **Next:** [VLM →](10-vlm.md)

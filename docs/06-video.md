@@ -52,11 +52,6 @@ RGB values
 
 **Not used yet.** Our project works with voice and text only, so it doesn't process video yet.
 
-## Key takeaways
-
-- Video = a collection of frames played continuously.
-- Video → frames → pixels → RGB values.
-
 ---
 
 **Previous:** [← Image Resolution](05-image-resolution.md) · [Home](../README.md) · **Next:** [Frame →](07-frame.md)

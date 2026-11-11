@@ -186,13 +186,6 @@ Decoder (generates):   Gemini and our Telugu GPT → write the answer token by t
 
 Code: [`tiny_llm_telugu.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_telugu.py), [`tiny_llm.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm.py)
 
-## Key takeaways
-
-- A Transformer = tokenization → embeddings → positional encoding → Transformer layers → output.
-- Encoder = understands. Decoder = generates (GPT is decoder-only).
-- Self-attention uses Query, Key and Value. Multi-head attention runs several attentions in parallel.
-- Masking hides future words so the model can't peek at the answer.
-
 ---
 
 **Previous:** [← DL](18-dl.md) · [Home](../README.md) · **Next:** [Prompt Engineering →](20-prompt-engineering.md)

@@ -74,12 +74,6 @@ Role (Yodha) + time + rules + manual passage (RAG) + last 8 messages + user ques
 
 Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py) (functions `build_system`, `telugu_llm`, `get_context`)
 
-## Key takeaways
-
-- Zero-shot = no example, one-shot = one example, few-shot = several examples.
-- Chain of thought = step-by-step reasoning.
-- Role prompting = tell the model what role to take.
-
 ---
 
 **Previous:** [← Transformers](19-transformers.md) · [Home](../README.md) · **Next:** [Hallucination →](21-hallucination.md)

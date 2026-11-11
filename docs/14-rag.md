@@ -128,12 +128,6 @@ Details:
 
 Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py) (functions `_load_kb`, `retrieve_manual_context`, `build_system`)
 
-## Key takeaways
-
-- RAG = Retrieval + Augmentation + Generation.
-- It reduces hallucination and keeps answers up to date without retraining.
-- Key parts: document ingestion, chunking, embeddings, retrieval.
-
 ---
 
 **Previous:** [← ROS](13-ros.md) · [Home](../README.md) · **Next:** [API →](15-api.md)

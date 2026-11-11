@@ -81,12 +81,6 @@ It runs with **uvicorn** inside a **Docker** container on **Azure Container Apps
 
 Live docs: [`/docs`](https://telugu-voice-app.gentletree-f4002f64.southindia.azurecontainerapps.io/docs) · Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py)
 
-## Key takeaways
-
-- FastAPI is a Python framework for building APIs.
-- Python function + URL + method = an API endpoint.
-- It gives you automatic docs at `/docs`.
-
 ---
 
 **Previous:** [← API](15-api.md) · [Home](../README.md) · **Next:** [ML →](17-ml.md)

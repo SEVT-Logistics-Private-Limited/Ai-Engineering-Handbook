@@ -122,12 +122,6 @@ Each one is a decoder-only model that generates text **token by token**, exactly
 
 Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py) (`_llm_call_with_fallback`, `telugu_llm`), [`tiny_llm.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm.py), [`tiny_llm_telugu.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_telugu.py)
 
-## Key takeaways
-
-- An LLM is trained on huge amounts of text to learn language and predict the next token.
-- GPT = Generative Pre-trained Transformer: decoder-only, generating token by token.
-- Temperature controls randomness.
-
 ---
 
 **Previous:** [← VLA](11-vla.md) · [Home](../README.md) · **Next:** [ROS →](13-ros.md)

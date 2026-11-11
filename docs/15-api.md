@@ -120,12 +120,6 @@ All our endpoints use **REST + JSON**. The streaming endpoints use **Server-Sent
 
 Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py), [`voice-assistant/telugu_assistant.html`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/telugu_assistant.html)
 
-## Key takeaways
-
-- An API lets two systems communicate: request → response.
-- REST = flexible, JSON, HTTP methods. SOAP = strict, XML, operations.
-- Other types: GraphQL, WebSocket, Webhooks.
-
 ---
 
 **Previous:** [← RAG](14-rag.md) · [Home](../README.md) · **Next:** [FastAPI →](16-fastapi.md)
