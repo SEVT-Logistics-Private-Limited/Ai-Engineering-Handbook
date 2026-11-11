@@ -119,13 +119,15 @@ User speaks (Telugu)
         ↓
 Speech to text
         ↓
+FastAPI server receives the question (REST API on Azure)
+        ↓
 Translate the query (Telugu → English)
         ↓
-Retrieve from ChromaDB (vehicle manuals)
+RAG: retrieve the matching section from ChromaDB (vehicle manuals)
         ↓
-LLM generates the answer
+LLM (Gemini) generates the answer using the manual section
         ↓
-Text to speech
+Text to speech (FastAPI: POST /tts)
         ↓
 User hears the answer
 ```
