@@ -89,12 +89,6 @@ Fewer output tokens means **faster and cheaper** answers, which matters for a vo
 
 Code: [`tiny_llm_telugu.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_telugu.py), [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py)
 
-## Key takeaways
-
-- A token is a unit of text processed by an LLM.
-- Tokenization: text → tokens → token IDs → embeddings.
-- Tokens affect context window usage, cost, processing time and max prompt and output length.
-
 ---
 
 **Previous:** [← Hallucination](21-hallucination.md) · [Home](../README.md)

@@ -52,12 +52,6 @@ Frame 1 → Frame 2 → Frame 3 → ... → Frame 30
 
 **Not used yet.** Our project works with voice and text only, so it doesn't process video yet.
 
-## Key takeaways
-
-- FPS = frames displayed per second.
-- 30 FPS = 30 images every second.
-- Higher FPS = smoother, but more data.
-
 ---
 
 **Previous:** [← Frame](07-frame.md) · [Home](../README.md) · **Next:** [NLP →](09-nlp.md)

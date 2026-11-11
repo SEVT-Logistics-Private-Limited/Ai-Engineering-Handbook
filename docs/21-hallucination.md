@@ -76,12 +76,6 @@ Answer comes back in English only → output check → "Can you say that again?"
 
 Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py) (functions `build_system`, `retrieve_manual_context`, `clean_for_tts`)
 
-## Key takeaways
-
-- Hallucination = plausible but wrong or made-up output.
-- It happens because LLMs generate from patterns and don't verify facts.
-- Reduce it with RAG, better prompts, structured outputs, validation, low temperature and citations.
-
 ---
 
 **Previous:** [← Prompt Engineering](20-prompt-engineering.md) · [Home](../README.md) · **Next:** [Tokenization →](22-tokenization.md)

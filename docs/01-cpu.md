@@ -69,12 +69,6 @@ User request → Azure server (CPU) → calls Gemini (Google's GPUs) → CPU cle
 
 Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py)
 
-## Key takeaways
-
-- A computer only understands numbers.
-- The CPU executes instructions and does general-purpose computing.
-- It's good for everyday work, but not for processing large amounts of high-resolution images or video.
-
 ---
 
 [Home](../README.md) · **Next:** [GPU →](02-gpu.md)

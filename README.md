@@ -25,7 +25,7 @@ This handbook explains the core concepts behind modern AI in a simple, consisten
 
 ## How each topic is structured
 
-Every topic page follows the same eight-part layout, so any page can be read on its own:
+Every topic page follows the same seven-part layout, so any page can be read on its own:
 
 | # | Section | Purpose |
 |---|---|---|
@@ -36,7 +36,6 @@ Every topic page follows the same eight-part layout, so any page can be read on 
 | 5 | Flow diagram | Visual summary |
 | 6 | Real-world use cases | Where it is used in industry |
 | 7 | In our project | How we applied it in the Telugu Voice AI Assistant |
-| 8 | Key takeaways | Summary |
 
 ## Learning path
 

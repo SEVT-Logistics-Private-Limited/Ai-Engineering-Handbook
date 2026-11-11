@@ -72,12 +72,6 @@ Image → Vision encoder → Projector / connector → Multimodal LLM → Answer
 
 The LLM we use (Gemini) can also accept images, so adding photo questions later would mean sending the image along with the question.
 
-## Key takeaways
-
-- VLM = understands images and text, and responds in text.
-- It sees and understands, but takes no action.
-- Image → patches → vision encoder → image embeddings → language model → answer.
-
 ---
 
 **Previous:** [← NLP](09-nlp.md) · [Home](../README.md) · **Next:** [VLA →](11-vla.md)

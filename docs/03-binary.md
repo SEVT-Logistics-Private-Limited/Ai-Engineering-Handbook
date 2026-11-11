@@ -94,12 +94,6 @@ The spoken answer comes back the same way: audio bytes → base64 → browser �
 
 Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py) (`base64.b64decode`, `base64.b64encode`), [`tiny_llm_3b.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_3b.py) (bf16 save)
 
-## Key takeaways
-
-- Binary uses only 0 and 1. 0 = OFF, 1 = ON.
-- One binary digit = 1 bit, and 8 bits = 1 byte.
-- 1 KB = 1024 bytes, 1 MB = 1024 KB, 1 GB = 1024 MB, 1 TB = 1024 GB.
-
 ---
 
 **Previous:** [← GPU](02-gpu.md) · [Home](../README.md) · **Next:** [Image →](04-image.md)

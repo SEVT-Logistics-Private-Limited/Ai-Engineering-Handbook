@@ -59,12 +59,6 @@ Camera sees the bottle → ROS → VLA decides "pick it up" → ROS → Arm move
 
 **Not used yet.** ROS is for robots, and our project is a software voice assistant.
 
-## Key takeaways
-
-- ROS is a framework for building and controlling robots.
-- It connects and coordinates the camera, sensors, arms and microphone.
-- ROS connects and coordinates robot software and hardware.
-
 ---
 
 **Previous:** [← LLM](12-llm.md) · [Home](../README.md) · **Next:** [RAG →](14-rag.md)

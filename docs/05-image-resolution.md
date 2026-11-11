@@ -60,12 +60,6 @@ Width (pixels) × Height (pixels)
 
 **Not used yet.** Our project works with voice and text only, so it doesn't process images yet.
 
-## Key takeaways
-
-- Resolution = width × height in pixels.
-- More pixels = finer detail = more numbers to process.
-- 1 MP = 1,000,000 pixels.
-
 ---
 
 **Previous:** [← Image](04-image.md) · [Home](../README.md) · **Next:** [Video →](06-video.md)

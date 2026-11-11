@@ -68,12 +68,6 @@ Training script (Python) → GPU (Jetson / A100) → trained model file (.pt) �
 
 Code: [`tiny_llm_400m.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_400m.py) (bf16 + gradient checkpointing), [`tiny_llm_3b.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_3b.py)
 
-## Key takeaways
-
-- The GPU performs many calculations in parallel.
-- It's built for high-resolution images, video, games and AI.
-- CPU = step by step, GPU = many tasks at the same time.
-
 ---
 
 **Previous:** [← CPU](01-cpu.md) · [Home](../README.md) · **Next:** [Binary →](03-binary.md)
