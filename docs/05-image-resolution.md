@@ -56,6 +56,10 @@ Width (pixels) × Height (pixels)
 - Screen resolutions (HD, Full HD 1920 × 1080, 4K)
 - AI models resize images to a fixed resolution before processing
 
+## In our project
+
+**Not used yet.** Our project works with voice and text only, so it doesn't process images yet.
+
 ## Key takeaways
 
 - Resolution = width × height in pixels.

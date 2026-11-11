@@ -87,7 +87,38 @@ Web / Mobile /        Enterprise /
 - Calling an LLM (Gemini, GPT) from your own code
 - Mobile apps talking to their servers
 
-**In my project:** the Telugu voice assistant is a REST API built with [FastAPI](16-fastapi.md).
+## In our project
+
+**Used, in both directions.** Our project **provides** an API and **uses** other APIs.
+
+**Our API (REST):** the browser talks to our server through these endpoints:
+
+| Method | Endpoint | What it does |
+|---|---|---|
+| GET | `/healthz` | Checks the server is running |
+| GET | `/` | Shows the status: version, time, knowledge base loaded or not |
+| GET | `/assistant` | Opens the voice assistant web page |
+| POST | `/tts` | Text → Telugu speech |
+| POST | `/converse` | Voice + chat history → transcript, answer and audio |
+| POST | `/converse_stream` | Same, but sends the steps back one by one |
+| POST | `/converse_text_stream` | Text → answer, sent back step by step (used by the web page) |
+| POST | `/voice` | One question in voice → one answer in voice |
+
+**APIs we call:**
+
+| External API | Used for |
+|---|---|
+| **Google Gemini API** | LLM answers, translation, speech-to-text backup |
+| **gTTS** (Google Text-to-Speech) | Telugu speech output |
+
+```text
+Browser → POST /converse_text_stream → Our API → Gemini API → Our API → Browser
+Browser → POST /tts → Our API → gTTS → Our API → Browser (plays audio)
+```
+
+All our endpoints use **REST + JSON**. The streaming endpoints use **Server-Sent Events (SSE)** to send each step (transcript → answer → done) as soon as it's ready.
+
+Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py), [`voice-assistant/telugu_assistant.html`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/telugu_assistant.html)
 
 ## Key takeaways
 

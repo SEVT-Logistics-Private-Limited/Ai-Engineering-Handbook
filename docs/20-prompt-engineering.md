@@ -48,14 +48,31 @@ Role:       "You are an expert…" + Question ──→ LLM → Answer in that r
 - Getting answers in a specific format
 - Solving maths and logic problems step by step
 
-**In my project:** the Telugu voice assistant uses **role prompting**. Its prompt (written in Telugu) tells the LLM:
-- "You are **Yodha**, a friendly Telugu AI assistant" (the role)
-- answer mainly in Telugu
-- give short answers to short questions
-- don't use symbols like `*` or `#` (they would be read aloud)
-- if you don't know, say so; don't imagine
+## In our project
 
-It also gives the current time and date, and the vehicle-manual passage from [RAG](14-rag.md) ([`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py), function `build_system`).
+**Used. Our assistant's personality and rules come from its prompt.** It's built fresh for every question (function `build_system`):
+
+| Prompt part | What it says (written in Telugu) | Technique |
+|---|---|---|
+| **Role** | "You are **Yodha**, a friendly Telugu AI assistant" | Role prompting |
+| **Current time** | The current IST time, date and weekday | Giving context |
+| **Facts** | Capitals of India, Telangana and Andhra Pradesh | Giving context |
+| **Rules** | Answer mainly in Telugu, short answers for short questions, no symbols like `*` `#` `_` `/` | Clear instructions |
+| **Honesty** | For live data (cricket scores, weather) say "అది నాకు live గా తెలియదు మిత్రమా" ("I don't know that live, friend"), and don't imagine unknown facts | Reducing hallucination |
+| **Manual text** | The vehicle-manual passage from RAG, with its source | Giving context (RAG) |
+| **History** | The last 8 messages of the conversation | Memory |
+
+```text
+Role (Yodha) + time + rules + manual passage (RAG) + last 8 messages + user question
+        ↓
+      Gemini
+        ↓
+  Telugu answer
+```
+
+**A lesson we learned:** some Gemini models returned **empty answers** when the role was sent as a "system instruction". The fix was to send the role as the first user message, followed by a model reply "సరే." ("Okay."). It works with every model.
+
+Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py) (functions `build_system`, `telugu_llm`, `get_context`)
 
 ## Key takeaways
 

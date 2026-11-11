@@ -85,9 +85,42 @@ Repeat
 - Coding help
 - Voice assistants
 
-**In my project:**
-- The live Telugu voice assistant uses **Google Gemini** as its LLM.
-- I also built GPT-style models **from scratch**, from 984 parameters up to about 3 billion ([tiny-llm-jetson](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson)).
+## In our project
+
+**Used, in two ways.**
+
+### 1. Gemini powers the live assistant
+
+The LLM does three jobs in our voice assistant:
+
+| Job | Example |
+|---|---|
+| **Answer questions** | Generates Yodha's Telugu answer |
+| **Translate** | Telugu question → English for the manual search |
+| **Speech to text (backup)** | Transcribes Telugu audio when the browser can't |
+
+**Fallback chain:** if one model fails or returns nothing, the next one is tried automatically.
+
+```text
+gemini-3.6-flash → (fails) → gemini-2.0-flash → (fails) → gemini-1.5-flash → (all fail) → polite Telugu apology
+```
+
+- Answers are limited to **500 output tokens** (`max_output_tokens`) to keep them short and fast.
+- The **last 8 messages** of the conversation are sent each time, so the assistant remembers context.
+
+### 2. We built our own GPT-style models from scratch
+
+| Model | Parameters | Trained on |
+|---|---|---|
+| Rung 1 | 984 | Jetson Orin Nano |
+| Rung 2 | 990K | Jetson Orin Nano |
+| Rung 5 | ~1B | Colab A100 |
+| Rung 7 | ~3B | Colab A100 |
+| **Telugu model** | **25M** | Colab A100, real Telugu text |
+
+Each one is a decoder-only model that generates text **token by token**, exactly as described above. The goal is to eventually replace Gemini with our own Telugu model.
+
+Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py) (`_llm_call_with_fallback`, `telugu_llm`), [`tiny_llm.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm.py), [`tiny_llm_telugu.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_telugu.py)
 
 ## Key takeaways
 

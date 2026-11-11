@@ -46,7 +46,27 @@ Task 4
 - Video editing and high-resolution video playback
 - Training and running AI models (LLMs, image models)
 
-**In my project:** I trained my own small language models on GPUs: an NVIDIA **Jetson Orin Nano** and a **Google Colab A100** ([tiny-llm-jetson](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson)).
+## In our project
+
+**Used, for training our own language models.** Training means billions of calculations, so it needs a GPU.
+
+| GPU | What we trained on it |
+|---|---|
+| **NVIDIA Jetson Orin Nano** (small edge device) | The first models: 984 parameters → 990K → 151M |
+| **Google Colab A100 (80 GB)** | Bigger models: 399M → 1B → 2B → 3B parameters, and the 25M Telugu model |
+
+GPU techniques we used to fit large models into GPU memory:
+- **bf16 (16-bit numbers)** instead of 32-bit, which halves the memory
+- **Gradient checkpointing:** recompute some values instead of storing them, saving memory
+- **Smaller batch sizes** for the biggest models
+
+What we learned: on the A100-80GB, about **3 billion parameters** was the maximum model size we could train.
+
+```text
+Training script (Python) → GPU (Jetson / A100) → trained model file (.pt) → saved to Hugging Face
+```
+
+Code: [`tiny_llm_400m.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_400m.py) (bf16 + gradient checkpointing), [`tiny_llm_3b.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/tiny_llm_3b.py)
 
 ## Key takeaways
 

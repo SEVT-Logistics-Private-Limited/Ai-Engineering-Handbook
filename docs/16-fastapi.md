@@ -45,19 +45,41 @@ Client sends request (e.g. POST /tts)
 - Back ends for web and mobile apps
 - Microservices
 
-**In my project:** the Telugu voice assistant is a FastAPI app ([`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py)). Some of its endpoints:
+## In our project
 
-| Method | Endpoint | What it does |
-|---|---|---|
-| GET | `/healthz` | Checks the server is running |
-| GET | `/assistant` | Opens the voice assistant web page |
-| POST | `/tts` | Text → Telugu speech |
-| POST | `/converse` | Your voice → answer as text and audio |
-| POST | `/converse_text_stream` | Your text → answer, sent back step by step |
+**Used. Our voice assistant's server is a FastAPI app.**
 
-FastAPI automatically created this docs page for it ([live `/docs`](https://telugu-voice-app.gentletree-f4002f64.southindia.azurecontainerapps.io/docs)):
+| FastAPI feature | How we use it |
+|---|---|
+| `@app.get` / `@app.post` | Each endpoint (`/tts`, `/converse`, …) is a Python function |
+| **Pydantic models** | Check incoming data: `TextReq` (text), `AudioReq` (base64 audio), `ConvReq` (audio + history), `TextConvReq` (text + history) |
+| **StreamingResponse** | Streams the steps back (transcript → answer → done) with Server-Sent Events |
+| **FileResponse** | Serves the voice assistant web page at `/assistant` |
+| **CORS middleware** | Lets the web page call the API from the browser |
+| **HTTPException** | Returns clear errors (for example, 400 when the transcript is empty) |
+| **Automatic `/docs`** | The interactive API page below, created for free |
+
+How one request flows through our FastAPI app:
+
+```text
+POST /converse_text_stream  { "text": "...", "history": [...] }
+        ↓
+Pydantic checks the request (TextConvReq)
+        ↓
+Instant reply? (time / date / greeting)
+        ↓ no
+RAG: search the vehicle manuals
+        ↓
+Gemini generates the answer
+        ↓
+StreamingResponse sends: transcript → response → done
+```
+
+It runs with **uvicorn** inside a **Docker** container on **Azure Container Apps**.
 
 ![FastAPI docs page of the voice assistant](../projects/telugu-voice-assistant/images/api-docs.png)
+
+Live docs: [`/docs`](https://telugu-voice-app.gentletree-f4002f64.southindia.azurecontainerapps.io/docs) · Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/main/voice-assistant/api.py)
 
 ## Key takeaways
 

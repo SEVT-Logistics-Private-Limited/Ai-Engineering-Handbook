@@ -99,9 +99,55 @@ I also built my own small Telugu language model from scratch to understand how L
 
 See [Transformers](../../docs/19-transformers.md) and [Tokenization](../../docs/22-tokenization.md).
 
-## Topics used in this project
+## Topics covered in this project
 
-[GPU](../../docs/02-gpu.md) · [LLM](../../docs/12-llm.md) · [RAG](../../docs/14-rag.md) · [API](../../docs/15-api.md) · [FastAPI](../../docs/16-fastapi.md) · [DL](../../docs/18-dl.md) · [Transformers](../../docs/19-transformers.md) · [Prompt Engineering](../../docs/20-prompt-engineering.md) · [Hallucination](../../docs/21-hallucination.md) · [Tokenization](../../docs/22-tokenization.md)
+The project uses **14 of the 22 topics** in this handbook. Each topic page has an **"In our project"** section with the full details.
+
+| # | Topic | Used? | How we used it |
+|---|---|---|---|
+| 1 | [CPU](../../docs/01-cpu.md) | ✅ | The live server runs on CPU-only cloud machines (Azure), including the embedding model |
+| 2 | [GPU](../../docs/02-gpu.md) | ✅ | Trained our models on a Jetson Orin Nano and a Colab A100, using bf16 and gradient checkpointing |
+| 3 | [Binary](../../docs/03-binary.md) | ✅ | Audio sent as base64 in JSON; models saved in 16-bit (bf16) to halve file size |
+| 4 | [Image](../../docs/04-image.md) | – | Not used yet |
+| 5 | [Image Resolution](../../docs/05-image-resolution.md) | – | Not used yet |
+| 6 | [Video](../../docs/06-video.md) | – | Not used yet |
+| 7 | [Frame](../../docs/07-frame.md) | – | Not used yet |
+| 8 | [FPS](../../docs/08-fps.md) | – | Not used yet |
+| 9 | [NLP](../../docs/09-nlp.md) | ✅ | Telugu speech-to-text, keyword matching, translation, text cleanup, Telugu-script detection |
+| 10 | [VLM](../../docs/10-vlm.md) | – | Not used yet |
+| 11 | [VLA](../../docs/11-vla.md) | – | Not used yet |
+| 12 | [LLM](../../docs/12-llm.md) | ✅ | Gemini with a 3-model fallback chain; our own GPT models from 984 parameters to 3B |
+| 13 | [ROS](../../docs/13-ros.md) | – | Not used yet |
+| 14 | [RAG](../../docs/14-rag.md) | ✅ | Vehicle manuals in ChromaDB, e5 embeddings, top-1 chunk if distance ≤ 0.35 |
+| 15 | [API](../../docs/15-api.md) | ✅ | 8 REST endpoints of our own; we call the Gemini and gTTS APIs |
+| 16 | [FastAPI](../../docs/16-fastapi.md) | ✅ | The server: Pydantic validation, streaming (SSE), automatic `/docs` |
+| 17 | [ML](../../docs/17-ml.md) | ✅ | Rules for simple questions, learned models for everything else |
+| 18 | [DL](../../docs/18-dl.md) | ✅ | Trained the Telugu model: batch 16, 10,000 steps, loss 331 → 1.42 |
+| 19 | [Transformers](../../docs/19-transformers.md) | ✅ | Our Telugu Transformer (8 layers, 8 heads, 128 context), e5 encoder, Gemini decoder |
+| 20 | [Prompt Engineering](../../docs/20-prompt-engineering.md) | ✅ | "Yodha" role prompt with rules, time, manual text and the last 8 messages |
+| 21 | [Hallucination](../../docs/21-hallucination.md) | ✅ | "Don't imagine" rules, RAG, relevance threshold, Telugu output check |
+| 22 | [Tokenization](../../docs/22-tokenization.md) | ✅ | Character tokenizer (245 Telugu tokens); output-token limits on Gemini |
+
+How the topics connect inside the assistant:
+
+```text
+User speaks (NLP: speech to text)
+        ↓
+Browser → our REST API (API, FastAPI, Binary: base64 audio)
+        ↓
+Simple question? → rules → instant answer (ML vs rules)
+        ↓ no
+RAG: embeddings + ChromaDB (RAG, Transformers: e5 encoder)
+        ↓
+Prompt: Yodha role + rules + manual text (Prompt Engineering, Hallucination)
+        ↓
+Gemini generates the answer (LLM, Tokenization: token limits)
+        ↓
+Clean text → speech → user hears it (NLP)
+
+Behind the scenes: our own Telugu model trained on a GPU (GPU, DL, Transformers, Tokenization)
+                   live server runs on Azure CPUs (CPU)
+```
 
 ---
 

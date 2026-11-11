@@ -63,6 +63,12 @@ Processed image ← Image processing ← Image as an array
 - Medical images (X-ray, MRI)
 - Input for AI models that understand images ([VLM](10-vlm.md))
 
+## In our project
+
+**Not used yet.** Our project works with voice and text only, so it doesn't process images yet.
+
+A natural next step would be letting a user send a photo (for example, of a dashboard warning light) and answering about it with a [VLM](10-vlm.md).
+
 ## Key takeaways
 
 - An image is made of millions of tiny squares called pixels.

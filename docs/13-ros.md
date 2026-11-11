@@ -55,6 +55,10 @@ Camera sees the bottle → ROS → VLA decides "pick it up" → ROS → Arm move
 - Drones
 - Industrial robotic arms
 
+## In our project
+
+**Not used yet.** ROS is for robots, and our project is a software voice assistant.
+
 ## Key takeaways
 
 - ROS is a framework for building and controlling robots.

@@ -66,6 +66,12 @@ Image → Vision encoder → Projector / connector → Multimodal LLM → Answer
 2. Robotics and automation
 3. Healthcare
 
+## In our project
+
+**Not used yet.** Our project works with voice and text only, so it doesn't process images yet.
+
+The LLM we use (Gemini) can also accept images, so adding photo questions later would mean sending the image along with the question.
+
 ## Key takeaways
 
 - VLM = understands images and text, and responds in text.
