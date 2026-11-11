@@ -1,9 +1,0 @@
-# Runnable examples
-numpy>=1.26
-fastapi>=0.110
-uvicorn>=0.27
-httpx>=0.27        # used by FastAPI's TestClient in the API example
-
-# Tests and figure generation
-pytest>=8.0
-matplotlib>=3.8
