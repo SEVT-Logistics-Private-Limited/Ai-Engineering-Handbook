@@ -40,9 +40,9 @@ User hears the answer
 | Step | What happens | Topic |
 |---|---|---|
 | Speech to text | Telugu speech becomes Telugu text | Not yet |
-| Translate the query | Telugu → English, because the manuals are in English | [LLM](../../docs/12-llm.md) |
-| Retrieve from ChromaDB | Find the manual section that matches the question | [RAG](../../docs/14-rag.md) |
-| LLM generates the answer | Gemini answers using the manual section, as "Yodha" | [LLM](../../docs/12-llm.md), [Prompt Engineering](../../docs/20-prompt-engineering.md) |
+| Translate the query | Telugu → English, because the manuals are in English | [LLM](../../docs/11-llm.md) |
+| Retrieve from ChromaDB | Find the manual section that matches the question | [RAG](../../docs/13-rag.md) |
+| LLM generates the answer | Gemini answers using the manual section, as "Yodha" | [LLM](../../docs/11-llm.md), [Prompt Engineering](../../docs/19-prompt-engineering.md) |
 | Text to speech | The Telugu answer becomes audio | Not yet |
 
 ## System overview
@@ -62,7 +62,7 @@ User hears the answer
 
 ## API endpoints
 
-The assistant is a REST API built with [FastAPI](../../docs/16-fastapi.md).
+The assistant is a REST API built with [FastAPI](../../docs/15-fastapi.md).
 
 | Method | Endpoint | What it does |
 |---|---|---|
@@ -97,43 +97,42 @@ We also built a small Telugu language model from scratch to understand how LLMs 
 | Context length | 128 | Maximum number of tokens the model can process together in one input |
 | Tokens (vocabulary) | 245 | One token per Telugu character |
 
-See [Transformers](../../docs/19-transformers.md) and [Tokenization](../../docs/22-tokenization.md).
+See [Transformers](../../docs/18-transformers.md) and [Tokenization](../../docs/21-tokenization.md).
 
 ## Topics covered in this project
 
-The project uses **14 of the 22 topics** in this handbook. Each topic page has an **"In our project"** section with the full details.
+The project uses **13 of the 21 topics** in this handbook. Each topic page has an **"In our project"** section with the full details.
 
 | # | Topic | Used? | How we used it |
 |---|---|---|---|
-| 1 | [CPU](../../docs/01-cpu.md) | Yes | The live server runs on CPU-only cloud machines (Azure), including the embedding model |
-| 2 | [GPU](../../docs/02-gpu.md) | Yes | Trained our models on a Jetson Orin Nano and a Colab A100, using bf16 and gradient checkpointing |
-| 3 | [Binary](../../docs/03-binary.md) | Yes | Audio sent as base64 in JSON; models saved in 16-bit (bf16) to halve file size |
-| 4 | [Image](../../docs/04-image.md) | Not yet | Not used yet |
-| 5 | [Image Resolution](../../docs/05-image-resolution.md) | Not yet | Not used yet |
-| 6 | [Video](../../docs/06-video.md) | Not yet | Not used yet |
-| 7 | [Frame](../../docs/07-frame.md) | Not yet | Not used yet |
-| 8 | [FPS](../../docs/08-fps.md) | Not yet | Not used yet |
-| 9 | [NLP](../../docs/09-nlp.md) | Yes | Telugu speech-to-text, keyword matching, translation, text cleanup, Telugu-script detection |
-| 10 | [VLM](../../docs/10-vlm.md) | Not yet | Not used yet |
-| 11 | [VLA](../../docs/11-vla.md) | Not yet | Not used yet |
-| 12 | [LLM](../../docs/12-llm.md) | Yes | Gemini with a 3-model fallback chain; our own GPT models from 984 parameters to 3B |
-| 13 | [ROS](../../docs/13-ros.md) | Not yet | Not used yet |
-| 14 | [RAG](../../docs/14-rag.md) | Yes | Vehicle manuals in ChromaDB, e5 embeddings, top-1 chunk if distance ≤ 0.35 |
-| 15 | [API](../../docs/15-api.md) | Yes | 8 REST endpoints of our own; we call the Gemini and gTTS APIs |
-| 16 | [FastAPI](../../docs/16-fastapi.md) | Yes | The server: Pydantic validation, streaming (SSE), automatic `/docs` |
-| 17 | [ML](../../docs/17-ml.md) | Yes | Rules for simple questions, learned models for everything else |
-| 18 | [DL](../../docs/18-dl.md) | Yes | Trained the Telugu model: batch 16, 10,000 steps, loss 331 → 1.42 |
-| 19 | [Transformers](../../docs/19-transformers.md) | Yes | Our Telugu Transformer (8 layers, 8 heads, 128 context), e5 encoder, Gemini decoder |
-| 20 | [Prompt Engineering](../../docs/20-prompt-engineering.md) | Yes | "Yodha" role prompt with rules, time, manual text and the last 8 messages |
-| 21 | [Hallucination](../../docs/21-hallucination.md) | Yes | "Don't imagine" rules, RAG, relevance threshold, Telugu output check |
-| 22 | [Tokenization](../../docs/22-tokenization.md) | Yes | Character tokenizer (245 Telugu tokens); output-token limits on Gemini |
+| 1 | [CPU](../../docs/01-cpu.md) | Yes | The live server runs on CPU-only cloud machines (Azure), including the embedding model; audio sent as binary → base64 in JSON |
+| 2 | [GPU](../../docs/02-gpu.md) | Yes | Trained our models on a Jetson Orin Nano and a Colab A100; 16-bit (bf16) numbers to halve memory; up to ~100% of GPU memory for the largest models |
+| 3 | [Image](../../docs/03-image.md) | Not yet | Not used yet |
+| 4 | [Image Resolution](../../docs/04-image-resolution.md) | Not yet | Not used yet |
+| 5 | [Video](../../docs/05-video.md) | Not yet | Not used yet |
+| 6 | [Frame](../../docs/06-frame.md) | Not yet | Not used yet |
+| 7 | [FPS](../../docs/07-fps.md) | Not yet | Not used yet |
+| 8 | [NLP](../../docs/08-nlp.md) | Yes | Telugu speech-to-text, keyword matching, translation, text cleanup, Telugu-script detection |
+| 9 | [VLM](../../docs/09-vlm.md) | Not yet | Not used yet |
+| 10 | [VLA](../../docs/10-vla.md) | Not yet | Not used yet |
+| 11 | [LLM](../../docs/11-llm.md) | Yes | Gemini with a 3-model fallback chain; our own GPT models from 984 parameters to 3B |
+| 12 | [ROS](../../docs/12-ros.md) | Not yet | Not used yet |
+| 13 | [RAG](../../docs/13-rag.md) | Yes | Vehicle manuals in ChromaDB, e5 embeddings, top-1 chunk if distance ≤ 0.35 |
+| 14 | [API](../../docs/14-api.md) | Yes | 8 REST endpoints of our own; we call the Gemini and gTTS APIs |
+| 15 | [FastAPI](../../docs/15-fastapi.md) | Yes | The server: Pydantic validation, streaming (SSE), automatic `/docs` |
+| 16 | [ML](../../docs/16-ml.md) | Yes | Rules for simple questions, learned models for everything else |
+| 17 | [DL](../../docs/17-dl.md) | Yes | Trained the Telugu model: batch 16, 10,000 steps, loss 331 → 1.42 |
+| 18 | [Transformers](../../docs/18-transformers.md) | Yes | Our Telugu Transformer (8 layers, 8 heads, 128 context), e5 encoder, Gemini decoder |
+| 19 | [Prompt Engineering](../../docs/19-prompt-engineering.md) | Yes | "Yodha" role prompt with rules, time, manual text and the last 8 messages |
+| 20 | [Hallucination](../../docs/20-hallucination.md) | Yes | "Don't imagine" rules, RAG, relevance threshold, Telugu output check |
+| 21 | [Tokenization](../../docs/21-tokenization.md) | Yes | Character tokenizer (245 Telugu tokens); output-token limits on Gemini |
 
 How the topics connect inside the assistant:
 
 ```text
 User speaks (NLP: speech to text)
         ↓
-Browser → our REST API (API, FastAPI, Binary: base64 audio)
+Browser → our REST API (API, FastAPI; audio sent as base64)
         ↓
 Simple question? → rules → instant answer (ML vs rules)
         ↓ no

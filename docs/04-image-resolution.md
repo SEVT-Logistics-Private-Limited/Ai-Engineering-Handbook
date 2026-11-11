@@ -1,4 +1,4 @@
-# 5. Image Resolution
+# 4. Image Resolution
 
 > Resolution is the number of pixels in an image, written as width × height.
 
@@ -62,4 +62,4 @@ Width (pixels) × Height (pixels)
 
 ---
 
-**Previous:** [← Image](04-image.md) · [Home](../README.md) · **Next:** [Video →](06-video.md)
+**Previous:** [← Image](03-image.md) · [Home](../README.md) · **Next:** [Video →](05-video.md)

@@ -1,4 +1,4 @@
-# 8. FPS (Frames Per Second)
+# 7. FPS (Frames Per Second)
 
 > FPS is how many frames are displayed in one second.
 
@@ -54,4 +54,4 @@ Frame 1 → Frame 2 → Frame 3 → ... → Frame 30
 
 ---
 
-**Previous:** [← Frame](07-frame.md) · [Home](../README.md) · **Next:** [NLP →](09-nlp.md)
+**Previous:** [← Frame](06-frame.md) · [Home](../README.md) · **Next:** [NLP →](08-nlp.md)

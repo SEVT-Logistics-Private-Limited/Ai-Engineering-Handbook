@@ -1,4 +1,4 @@
-# 13. ROS (Robot Operating System)
+# 12. ROS (Robot Operating System)
 
 > ROS is a robotics software framework that provides tools and communication mechanisms to build and control robots.
 
@@ -61,4 +61,4 @@ Camera sees the bottle → ROS → VLA decides "pick it up" → ROS → Arm move
 
 ---
 
-**Previous:** [← LLM](12-llm.md) · [Home](../README.md) · **Next:** [RAG →](14-rag.md)
+**Previous:** [← LLM](11-llm.md) · [Home](../README.md) · **Next:** [RAG →](13-rag.md)

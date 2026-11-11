@@ -1,4 +1,4 @@
-# 12. LLM (Large Language Model)
+# 11. LLM (Large Language Model)
 
 > An LLM is an AI model trained on a huge amount of text data to understand and generate human language.
 
@@ -18,7 +18,7 @@ Examples: models from families such as **GPT, Claude, Gemini**.
 
 **GPT** stands for **Generative Pre-trained Transformer**.
 
-GPT-style models are generally **decoder-only** [Transformer](19-transformers.md) models designed for **autoregressive generation**: the model generates the answer **token by token**.
+GPT-style models are generally **decoder-only** [Transformer](18-transformers.md) models designed for **autoregressive generation**: the model generates the answer **token by token**.
 
 Examples: GPT-3, GPT-4, GPT-5, Llama, Qwen.
 
@@ -124,4 +124,4 @@ Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limit
 
 ---
 
-**Previous:** [← VLA](11-vla.md) · [Home](../README.md) · **Next:** [ROS →](13-ros.md)
+**Previous:** [← VLA](10-vla.md) · [Home](../README.md) · **Next:** [ROS →](12-ros.md)

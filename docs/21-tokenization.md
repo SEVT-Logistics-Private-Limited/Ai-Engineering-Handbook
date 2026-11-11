@@ -1,4 +1,4 @@
-# 22. Tokenization
+# 21. Tokenization
 
 > Tokenization is the process of converting text into tokens that the model can process.
 
@@ -38,7 +38,7 @@ Tokens  →  Token IDs
 "amazing"  → 4567
 ```
 
-These numbers are then used to look up the **embeddings** (see [Transformers](19-transformers.md)).
+These numbers are then used to look up the **embeddings** (see [Transformers](18-transformers.md)).
 
 ## Flow diagram
 
@@ -58,7 +58,7 @@ Transformer
 
 - Calculating the cost of an LLM API call (you pay per token)
 - Checking whether a document fits in the model's context window
-- Splitting long documents into chunks for [RAG](14-rag.md)
+- Splitting long documents into chunks for [RAG](13-rag.md)
 
 ## In our project
 
@@ -91,4 +91,4 @@ Code: [`tiny_llm_telugu.py`](https://github.com/SEVT-Logistics-Private-Limited/t
 
 ---
 
-**Previous:** [← Hallucination](21-hallucination.md) · [Home](../README.md)
+**Previous:** [← Hallucination](20-hallucination.md) · [Home](../README.md)

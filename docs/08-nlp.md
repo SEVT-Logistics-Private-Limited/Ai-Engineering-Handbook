@@ -1,4 +1,4 @@
-# 9. NLP (Natural Language Processing)
+# 8. NLP (Natural Language Processing)
 
 > NLP is the branch of AI that helps computers understand, process and work with human language.
 
@@ -69,4 +69,4 @@ Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limit
 
 ---
 
-**Previous:** [← FPS](08-fps.md) · [Home](../README.md) · **Next:** [VLM →](10-vlm.md)
+**Previous:** [← FPS](07-fps.md) · [Home](../README.md) · **Next:** [VLM →](09-vlm.md)
