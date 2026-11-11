@@ -4,7 +4,8 @@
 **Pinned commit for this handbook:** [`9a7b564`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/tree/9a7b564c8d764d1eff92218261f2fd2cef99099e)
 **Owner:** Rishi Sasanala · Yodha AI (SEVT Logistics Private Limited)
 **Hardware:** Jetson Orin Nano Super · Colab Pro A100-SXM4-80GB
-**Live:** `https://52.140.52.237.nip.io/assistant`
+**Live (Azure Container Apps):** [https://telugu-voice-app.gentletree-f4002f64.southindia.azurecontainerapps.io/assistant](https://telugu-voice-app.gentletree-f4002f64.southindia.azurecontainerapps.io/assistant) · API docs: [`/docs`](https://telugu-voice-app.gentletree-f4002f64.southindia.azurecontainerapps.io/docs)
+**Previous host:** `52.140.52.237.nip.io` (Azure VM, no longer responding as of 2026-11-11)
 **Checkpoints:** [huggingface.co/RishikUttejSasanala](https://huggingface.co/RishikUttejSasanala)
 
 ---
@@ -94,10 +95,12 @@ flowchart TB
 3. **Rung 9:** first real language (Telugu, 25M, loss 1.42).
 4. **Voice assistant v1–v4.2:** Sarvam STT/LLM/TTS on an Azure VM. Instant cache, IST context, VAD, mobile autoplay fix. Conversational fine-tune on IndicVault (93k samples, loss 2.17 → 0.76).
 5. **v8:** all-Gemini (STT, LLM, TTS).
-6. **v10 (current):** browser STT, Gemini fallback chain, gTTS, **RAG over vehicle manuals**, SSE, barge-in, Container Apps CI/CD.
+6. **v10 (current):** browser STT, Gemini fallback chain, gTTS, **RAG over vehicle manuals**, SSE, barge-in, Container Apps CI/CD. Live at the `azurecontainerapps.io` URL above.
 7. **Compression track:** LoRA → ternary QAT pipeline with tests (Colab-only, results pending).
 
 ## 6. Known discrepancies (README vs code)
+
+> **Status:** fixed in [SEVT-Logistics-Private-Limited/tiny-llm-jetson#45](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/pull/45), which rewrites the README for v10 (Gemini + RAG, Container Apps URL). The table records what was out of date at the pinned commit.
 
 | README says | Code says |
 |---|---|
@@ -107,7 +110,7 @@ flowchart TB
 | Rung 8 "5b" | 3,072,828,000 params (3.07B) |
 | Infrastructure: Azure VM + systemd + Nginx | CI deploys to Azure Container Apps |
 
-Recommendation: update the project README to describe the v10 architecture, and keep a CHANGELOG.
+**Production finding (2026-11-11):** `GET /` on the live Container App returns `"kb": "disabled"`. The `/mnt/vehicledata` ChromaDB volume isn't mounted, so **RAG is currently off in production** and answers aren't grounded in the manuals. Fix: mount an Azure Files volume with the Chroma collection on the Container App, and make readiness fail if the KB is required.
 
 ## 7. Next steps (engineering view)
 
@@ -116,5 +119,5 @@ Recommendation: update the project README to describe the v10 architecture, and 
 3. **Latency:** stream LLM tokens → sentence-chunked TTS. Add per-stage timing to the SSE `done` event.
 4. **Refactor** the duplicated endpoint logic into one `answer_turn()` service.
 5. **Security:** auth + rate limiting, lock down `/debug` and CORS, use secret refs.
-6. **RAG:** version the ingestion script, use top-3 + reranking, and build a retrieval eval set.
+6. **RAG:** mount the KB volume in production first (it's currently `disabled`), then version the ingestion script, use top-3 + reranking, and build a retrieval eval set.
 7. **Edge:** run the Q4/ternary 3B on the Jetson Orin Nano (llama.cpp CUDA) for offline mode.

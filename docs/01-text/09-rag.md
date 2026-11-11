@@ -78,6 +78,7 @@ The **Yodha voice assistant answers vehicle-service questions grounded in vehicl
 **Synergy with fine-tuning:** `compression/README.md` plans to add "Q&A written from the vehicle manuals" to the LoRA dataset. RAG supplies the facts, and SFT supplies the Telugu answering style.
 
 ### Gaps worth fixing (review notes)
+- **RAG is off in production right now:** the live Container App reports `"kb": "disabled"` at `GET /` (checked 2026-11-11), because `/mnt/vehicledata` isn't mounted. Every answer is currently ungrounded.
 - The **ingestion pipeline isn't versioned** in the repo, so chunking, prefixes and the distance metric can't be reproduced or audited.
 - `retrieve_manual_context` swallows **all exceptions** silently (`except Exception: return None`), so retrieval outages are invisible. Log them.
 - The **translation call runs even when the KB answer will be rejected.** Consider embedding the Telugu query directly with multilingual e5 and comparing recall.
