@@ -53,7 +53,7 @@ The repo shows **two generations** of deployment:
 |---|---|---|
 | Compute | Azure VM Standard D2s v3, Ubuntu 24.04, South India | **Azure Container Apps** |
 | Process | systemd (auto-restart on crash/reboot) | Container App replicas (`--min-replicas 1`) |
-| Edge | Nginx + Let's Encrypt, `52.140.52.237.nip.io` | Container Apps ingress |
+| Edge | Nginx + Let's Encrypt, `52.140.52.237.nip.io` | Container Apps ingress (managed TLS), `telugu-voice-app.gentletree-f4002f64.southindia.azurecontainerapps.io` |
 | Deploy | Manual | **GitHub Actions on push to `main`** |
 
 - **Dockerfile** ([`voice-assistant/Dockerfile`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/9a7b564c8d764d1eff92218261f2fd2cef99099e/voice-assistant/Dockerfile)):
@@ -74,7 +74,7 @@ The repo shows **two generations** of deployment:
 - **No test or eval gate in CI:** every push to `main` deploys straight to production. Add a job that runs the CPU tests (`compression/test_*.py`) and an API smoke test (`/healthz`, one `/converse_text_stream` call) before `containerapp update`.
 - **Secret passed as a plain env var** in `az containerapp update --set-env-vars GEMINI_API_KEY=...`. Store it as a Container App *secret* (`secretref:`) or in Key Vault.
 - **Hard-coded paths** (`/home/azureuser/telugu_assistant.html`, `/mnt/vehicledata`) couple the code to one host layout. Make them env-configurable.
-- **The RAG volume isn't provisioned by IaC:** a fresh environment silently runs with `kb: disabled`. Declare the volume in Bicep/Terraform and fail readiness if the KB is required.
+- **The RAG volume isn't provisioned by IaC:** a fresh environment silently runs with `kb: disabled`. **This happened:** the Container Apps deployment reported `"kb": "disabled"` on 2026-11-11. Declare the volume (Azure Files) in Bicep/Terraform and fail readiness if the KB is required.
 - **Image bloat:** sentence-transformers pulls full PyTorch (with CUDA wheels by default). For a CPU container, install the CPU torch wheel to cut GBs.
 - **LFS pointer surprises:** cloning without LFS gives ~130-byte pointer files instead of weights. Several `.pt` files in the repo are pointers. Document how to fetch them.
 

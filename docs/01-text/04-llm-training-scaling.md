@@ -81,7 +81,7 @@ scaler.scale(loss).backward(); scaler.unscale_(opt)
 torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
 ```
 
-**Honest takeaway (recorded in the repo):** rungs 1–8 measure *engineering capacity* (can we fit and train N params?), not language ability, because the corpus is a single repeated sentence. Rung 9 is where actual language modeling starts. The roadmap goal, "replace Sarvam-105b with own model", requires the data side to scale next.
+**Honest takeaway (recorded in the repo):** rungs 1–8 measure *engineering capacity* (can we fit and train N params?), not language ability, because the corpus is a single repeated sentence. Rung 9 is where actual language modeling starts. The roadmap goal, replacing the hosted LLM (Sarvam-105b originally, Gemini today) with our own model, requires the data side to scale next.
 
 Telugu rung: [`tiny_llm_telugu.py`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/blob/9a7b564c8d764d1eff92218261f2fd2cef99099e/tiny_llm_telugu.py). Model cards: [`model-card-*.md`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/tree/main).
 

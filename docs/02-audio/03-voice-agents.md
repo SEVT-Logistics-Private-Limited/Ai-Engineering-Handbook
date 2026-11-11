@@ -78,7 +78,7 @@ The mic hears the agent's own TTS. Without **acoustic echo cancellation (AEC)**,
 
 ## 4. In our project: Yodha Telugu voice assistant
 
-**Live:** `https://52.140.52.237.nip.io/assistant`. Code: [`voice-assistant/`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/tree/9a7b564c8d764d1eff92218261f2fd2cef99099e/voice-assistant).
+**Live:** [https://telugu-voice-app.gentletree-f4002f64.southindia.azurecontainerapps.io/assistant](https://telugu-voice-app.gentletree-f4002f64.southindia.azurecontainerapps.io/assistant) (Azure Container Apps). Code: [`voice-assistant/`](https://github.com/SEVT-Logistics-Private-Limited/tiny-llm-jetson/tree/9a7b564c8d764d1eff92218261f2fd2cef99099e/voice-assistant).
 
 | Capability | Implementation | Link |
 |---|---|---|
