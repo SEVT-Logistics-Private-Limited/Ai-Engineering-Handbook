@@ -1,4 +1,4 @@
-# 21. Tokenization
+# 25. Tokenization
 
 > Tokenization is the process of converting text into tokens that the model can process.
 
@@ -38,7 +38,7 @@ Tokens  →  Token IDs
 "amazing"  → 4567
 ```
 
-These numbers are then used to look up the **embeddings** (see [Transformers](18-transformers.md)).
+These numbers are then used to look up the **embeddings** (see [Transformers](22-transformers.md)).
 
 ## Flow diagram
 
@@ -91,4 +91,4 @@ Code: [`tiny_llm_telugu.py`](https://github.com/SEVT-Logistics-Private-Limited/t
 
 ---
 
-**Previous:** [← Hallucination](20-hallucination.md) · [Home](../README.md)
+**Previous:** [← Hallucination](24-hallucination.md) · [Home](../README.md)

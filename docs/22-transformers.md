@@ -1,4 +1,4 @@
-# 18. Transformers
+# 22. Transformers
 
 > A Transformer is a type of deep learning architecture that helps computers understand and generate human language.
 
@@ -21,7 +21,7 @@ A Transformer looks at **all the words at once** and works out how they relate t
 | Step | What it does |
 |---|---|
 | Input text | The sentence |
-| Tokenization | Split the text into [tokens](21-tokenization.md) |
+| Tokenization | Split the text into [tokens](25-tokenization.md) |
 | Embeddings | Convert the tokens into vectors (numbers) |
 | Positional encoding | Add word-order information |
 | Transformer layers | Understand context, using self-attention and a feed-forward network |
@@ -188,4 +188,4 @@ Code: [`tiny_llm_telugu.py`](https://github.com/SEVT-Logistics-Private-Limited/t
 
 ---
 
-**Previous:** [← DL](17-dl.md) · [Home](../README.md) · **Next:** [Prompt Engineering →](19-prompt-engineering.md)
+**Previous:** [← DL](21-dl.md) · [Home](../README.md) · **Next:** [Prompt Engineering →](23-prompt-engineering.md)

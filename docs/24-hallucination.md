@@ -1,4 +1,4 @@
-# 20. Hallucination
+# 24. Hallucination
 
 > An LLM hallucinates when it generates information that appears plausible but is incorrect, unsupported or fabricated.
 
@@ -78,4 +78,4 @@ Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limit
 
 ---
 
-**Previous:** [← Prompt Engineering](19-prompt-engineering.md) · [Home](../README.md) · **Next:** [Tokenization →](21-tokenization.md)
+**Previous:** [← Prompt Engineering](23-prompt-engineering.md) · [Home](../README.md) · **Next:** [Tokenization →](25-tokenization.md)

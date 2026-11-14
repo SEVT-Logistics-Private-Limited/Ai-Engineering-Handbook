@@ -18,7 +18,7 @@ Examples: models from families such as **GPT, Claude, Gemini**.
 
 **GPT** stands for **Generative Pre-trained Transformer**.
 
-GPT-style models are generally **decoder-only** [Transformer](18-transformers.md) models designed for **autoregressive generation**: the model generates the answer **token by token**.
+GPT-style models are generally **decoder-only** [Transformer](22-transformers.md) models designed for **autoregressive generation**: the model generates the answer **token by token**.
 
 Examples: GPT-3, GPT-4, GPT-5, Llama, Qwen.
 

@@ -1,10 +1,10 @@
-# 24. Semi-Supervised Learning
+# 19. Semi-Supervised Learning
 
 > Semi-supervised learning uses a small amount of labelled data together with a large amount of unlabelled data.
 
 ## Introduction
 
-[Supervised Learning](22-supervised-learning.md) needs a known output (label) for every example. [Unsupervised Learning](23-unsupervised-learning.md) uses no labels at all. Semi-supervised learning sits **between the two**.
+[Supervised Learning](17-supervised-learning.md) needs a known output (label) for every example. [Unsupervised Learning](18-unsupervised-learning.md) uses no labels at all. Semi-supervised learning sits **between the two**.
 
 ## What is it?
 
@@ -72,4 +72,4 @@ Better model
 
 ---
 
-**Previous:** [← Unsupervised Learning](23-unsupervised-learning.md) · [Home](../README.md) · **Next:** [Reinforcement Learning →](25-reinforcement-learning.md)
+**Previous:** [← Unsupervised Learning](18-unsupervised-learning.md) · [Home](../README.md) · **Next:** [Reinforcement Learning →](20-reinforcement-learning.md)
