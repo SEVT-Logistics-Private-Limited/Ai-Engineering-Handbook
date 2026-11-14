@@ -50,58 +50,58 @@ LLMs                           Prompt Engineering → Hallucination → Tokeniza
 
 ### Hardware
 
-| # | Topic | Summary |
-|---|---|---|
-| 1 | [CPU](docs/01-cpu.md) | Step-by-step processing, binary, and how far LLM training can go on a CPU |
-| 2 | [GPU](docs/02-gpu.md) | Parallel processing, number formats, and how far we trained on a GPU |
+| # | Topic | Summary | Topics inside |
+|---|---|---|---|
+| 1 | [CPU](docs/01-cpu.md) | Step-by-step processing, binary, and how far LLM training can go on a CPU | Step-by-step (sequential) processing · Binary: the language of the CPU · Training an LLM on a CPU: how far you can go |
+| 2 | [GPU](docs/02-gpu.md) | Parallel processing, number formats, and how far we trained on a GPU | Parallel processing · Number formats (bits per number) · How far you can train on a GPU · GPU memory usage |
 
 ### Images and video
 
 Computers cannot see pictures, only numbers. This section shows how an image is stored as a grid of pixels, where each pixel holds red, green and blue values, and how resolution decides how much detail an image keeps. It then builds up to video: a sequence of images (frames) shown at a fixed speed (FPS). These basics explain how AI models are able to "see".
 
-| # | Topic | Summary |
-|---|---|---|
-| 3 | [Image](docs/03-image.md) | Pixels and RGB values |
-| 4 | [Image Resolution](docs/04-image-resolution.md) | Width × height in pixels |
-| 5 | [Video](docs/05-video.md) | Images played continuously |
-| 6 | [Frame](docs/06-frame.md) | One image inside a video |
-| 7 | [FPS](docs/07-fps.md) | Frames shown per second |
+| # | Topic | Summary | Topics inside |
+|---|---|---|---|
+| 3 | [Image](docs/03-image.md) | Pixels and RGB values | Pixels · RGB colour values · How a computer processes an image |
+| 4 | [Image Resolution](docs/04-image-resolution.md) | Width × height in pixels | Width × height · Megapixels (MP) · Resolution vs memory and GPU needs |
+| 5 | [Video](docs/05-video.md) | Images played continuously | Video as a sequence of images · How a video is stored in a computer |
+| 6 | [Frame](docs/06-frame.md) | One image inside a video | Image vs frame · Frames as the building blocks of video |
+| 7 | [FPS](docs/07-fps.md) | Frames shown per second | Frames per second · 30 / 60 / 120 FPS · How much data one second of video holds |
 
 ### Language, vision and robotics
 
-| # | Topic | Summary |
-|---|---|---|
-| 8 | [NLP](docs/08-nlp.md) | Branch of AI that understands human language |
-| 9 | [VLM](docs/09-vlm.md) | Sees and understands (image + text) |
-| 10 | [VLA](docs/10-vla.md) | Sees, understands and acts |
-| 11 | [LLM](docs/11-llm.md) | Trained on huge text to understand and generate language |
-| 12 | [ROS](docs/12-ros.md) | Connects and coordinates a robot's parts |
+| # | Topic | Summary | Topics inside |
+|---|---|---|---|
+| 8 | [NLP](docs/08-nlp.md) | Branch of AI that understands human language | What NLP is · Understanding a request: intent, action and required information |
+| 9 | [VLM](docs/09-vlm.md) | Sees and understands (image + text) | Image + text understanding · How a VLM reads an image |
+| 10 | [VLA](docs/10-vla.md) | Sees, understands and acts | Vision → language → action · VLM vs VLA |
+| 11 | [LLM](docs/11-llm.md) | Trained on huge text to understand and generate language | GPT-style models · How an LLM reads text · How it generates an answer · Temperature |
+| 12 | [ROS](docs/12-ros.md) | Connects and coordinates a robot's parts | What ROS does · How it fits with the other AI models |
 
 ### Tech stack
 
-| # | Topic | Summary |
-|---|---|---|
-| 13 | [RAG](docs/13-rag.md) | Retrieve documents, then let the LLM answer |
-| 14 | [API](docs/14-api.md) | How two software systems talk: request → response |
-| 15 | [FastAPI](docs/15-fastapi.md) | Building APIs in Python |
+| # | Topic | Summary | Topics inside |
+|---|---|---|---|
+| 13 | [RAG](docs/13-rag.md) | Retrieve documents, then let the LLM answer | RAG vs fine-tuning · Document ingestion · Chunking · Embedding · Retrieval · Evaluating a RAG system |
+| 14 | [API](docs/14-api.md) | How two software systems talk: request → response | Request → response · Types of APIs · REST and its methods · SOAP · REST vs SOAP |
+| 15 | [FastAPI](docs/15-fastapi.md) | Building APIs in Python | Python functions as endpoints · Automatic `/docs` · Input validation · Request flow |
 
 ### Machine learning foundations
 
-| # | Topic | Summary |
-|---|---|---|
-| 16 | [ML](docs/16-ml.md) | Systems that learn patterns from data |
-| 22 | [Supervised Learning](docs/22-supervised-learning.md) | Learns from inputs with known outputs: classification and regression |
-| 23 | [Unsupervised Learning](docs/23-unsupervised-learning.md) | Finds patterns in data without known outputs |
-| 17 | [DL](docs/17-dl.md) | Multi-layer neural networks; epochs, batches, training |
-| 18 | [Transformers](docs/18-transformers.md) | The architecture behind LLMs: attention, Q/K/V, masking |
+| # | Topic | Summary | Topics inside |
+|---|---|---|---|
+| 16 | [ML](docs/16-ml.md) | Systems that learn patterns from data | AI vs ML · Rules vs learning from data · Types of ML (supervised, unsupervised) |
+| 22 | [Supervised Learning](docs/22-supervised-learning.md) | Learns from inputs with known outputs: classification and regression | Inputs + known target outputs · House-price example · Classification · Regression |
+| 23 | [Unsupervised Learning](docs/23-unsupervised-learning.md) | Finds patterns in data without known outputs | No known target outputs · Customer-data example · Clustering · Anomaly detection · Supervised vs unsupervised |
+| 17 | [DL](docs/17-dl.md) | Multi-layer neural networks; epochs, batches, training | Neural networks · Epoch · Batch · Batch size · The training loop |
+| 18 | [Transformers](docs/18-transformers.md) | The architecture behind LLMs: attention, Q/K/V, masking | Architecture · Embeddings · Encoder vs decoder · Self-attention · Query, Key, Value (Q/K/V) · Multi-head attention · Masking |
 
 ### LLMs
 
-| # | Topic | Summary |
-|---|---|---|
-| 19 | [Prompt Engineering](docs/19-prompt-engineering.md) | Zero/one/few-shot, chain of thought, role prompting |
-| 20 | [Hallucination](docs/20-hallucination.md) | When an LLM makes things up, and how to reduce it |
-| 21 | [Tokenization](docs/21-tokenization.md) | Text → tokens → token IDs |
+| # | Topic | Summary | Topics inside |
+|---|---|---|---|
+| 19 | [Prompt Engineering](docs/19-prompt-engineering.md) | Zero/one/few-shot, chain of thought, role prompting | Zero-shot · One-shot · Few-shot · Chain of thought · Role prompting |
+| 20 | [Hallucination](docs/20-hallucination.md) | When an LLM makes things up, and how to reduce it | What hallucination is · Why it happens · How to reduce it (RAG, prompts, validation, temperature, citations) |
+| 21 | [Tokenization](docs/21-tokenization.md) | Text → tokens → token IDs | Token · Tokenization · Token IDs · Why tokens matter (limits and cost) |
 
 ## Featured project
 
