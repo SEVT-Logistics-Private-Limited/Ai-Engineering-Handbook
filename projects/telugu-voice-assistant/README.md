@@ -105,7 +105,7 @@ See [Transformers](../../docs/18-transformers.md) and [Tokenization](../../docs/
 
 ## Topics covered in this project
 
-The project uses **13 of the 21 topics** in this handbook. Each topic page has an **"In our project"** section with the full details.
+The project uses **13 of the 23 topics** in this handbook. Each topic page has an **"In our project"** section with the full details.
 
 | # | Topic | Used? | How we used it |
 |---|---|---|---|
@@ -130,6 +130,8 @@ The project uses **13 of the 21 topics** in this handbook. Each topic page has a
 | 19 | [Prompt Engineering](../../docs/19-prompt-engineering.md) | Yes | "Yodha" role prompt with rules, time, manual text and the last 8 messages |
 | 20 | [Hallucination](../../docs/20-hallucination.md) | Yes | "Don't imagine" rules, RAG, relevance threshold, Telugu output check |
 | 21 | [Tokenization](../../docs/21-tokenization.md) | Yes | Character tokenizer (245 Telugu tokens); output-token limits on Gemini |
+| 22 | [Supervised Learning](../../docs/22-supervised-learning.md) | Not directly | No classic classifier or regression model; our language models are self-supervised (predict the next character) |
+| 23 | [Unsupervised Learning](../../docs/23-unsupervised-learning.md) | Not yet | Not used yet |
 
 How the topics connect inside the assistant:
 
