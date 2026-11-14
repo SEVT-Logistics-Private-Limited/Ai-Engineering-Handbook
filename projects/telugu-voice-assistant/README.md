@@ -44,7 +44,7 @@ User hears the answer
 | Speech to text | Telugu speech becomes Telugu text | Audio (planned) |
 | Translate the query | Telugu → English, because the manuals are in English | [LLM](../../docs/11-llm.md) |
 | Retrieve from ChromaDB | Find the manual section that matches the question | [RAG](../../docs/13-rag.md) |
-| LLM generates the answer | Gemini answers using the manual section, as "Yodha" | [LLM](../../docs/11-llm.md), [Prompt Engineering](../../docs/19-prompt-engineering.md) |
+| LLM generates the answer | Gemini answers using the manual section, as "Yodha" | [LLM](../../docs/11-llm.md), [Prompt Engineering](../../docs/23-prompt-engineering.md) |
 | Text to speech | The Telugu answer becomes audio | Audio (planned) |
 
 ## System overview
@@ -101,7 +101,7 @@ We also built a small Telugu language model from scratch to understand how LLMs 
 | Context length | 128 | Maximum number of tokens the model can process together in one input |
 | Tokens (vocabulary) | 245 | One token per Telugu character |
 
-See [Transformers](../../docs/18-transformers.md) and [Tokenization](../../docs/21-tokenization.md).
+See [Transformers](../../docs/22-transformers.md) and [Tokenization](../../docs/25-tokenization.md).
 
 ## Topics covered in this project
 
@@ -125,15 +125,15 @@ The project uses **13 of the 25 topics** in this handbook. Each topic page has a
 | 14 | [API](../../docs/14-api.md) | Yes | 8 REST endpoints of our own; we call the Gemini and gTTS APIs |
 | 15 | [FastAPI](../../docs/15-fastapi.md) | Yes | The server: Pydantic validation, streaming (SSE), automatic `/docs` |
 | 16 | [ML](../../docs/16-ml.md) | Yes | Rules for simple questions, learned models for everything else |
-| 17 | [DL](../../docs/17-dl.md) | Yes | Trained the Telugu model: batch 16, 10,000 steps, loss 331 → 1.42 |
-| 18 | [Transformers](../../docs/18-transformers.md) | Yes | Our Telugu Transformer (8 layers, 8 heads, 128 context), e5 encoder, Gemini decoder |
-| 19 | [Prompt Engineering](../../docs/19-prompt-engineering.md) | Yes | "Yodha" role prompt with rules, time, manual text and the last 8 messages |
-| 20 | [Hallucination](../../docs/20-hallucination.md) | Yes | "Don't imagine" rules, RAG, relevance threshold, Telugu output check |
-| 21 | [Tokenization](../../docs/21-tokenization.md) | Yes | Character tokenizer (245 Telugu tokens); output-token limits on Gemini |
-| 22 | [Supervised Learning](../../docs/22-supervised-learning.md) | Not directly | No classic classifier or regression model; our language models are self-supervised (predict the next character) |
-| 23 | [Unsupervised Learning](../../docs/23-unsupervised-learning.md) | Not yet | Not used yet |
-| 24 | [Semi-Supervised Learning](../../docs/24-semi-supervised-learning.md) | Not yet | Not used yet |
-| 25 | [Reinforcement Learning](../../docs/25-reinforcement-learning.md) | Not yet | Not used yet |
+| 17 | [Supervised Learning](../../docs/17-supervised-learning.md) | Not directly | No classic classifier or regression model; our language models are self-supervised (predict the next character) |
+| 18 | [Unsupervised Learning](../../docs/18-unsupervised-learning.md) | Not yet | Not used yet |
+| 19 | [Semi-Supervised Learning](../../docs/19-semi-supervised-learning.md) | Not yet | Not used yet |
+| 20 | [Reinforcement Learning](../../docs/20-reinforcement-learning.md) | Not yet | Not used yet |
+| 21 | [DL](../../docs/21-dl.md) | Yes | Trained the Telugu model: batch 16, 10,000 steps, loss 331 → 1.42 |
+| 22 | [Transformers](../../docs/22-transformers.md) | Yes | Our Telugu Transformer (8 layers, 8 heads, 128 context), e5 encoder, Gemini decoder |
+| 23 | [Prompt Engineering](../../docs/23-prompt-engineering.md) | Yes | "Yodha" role prompt with rules, time, manual text and the last 8 messages |
+| 24 | [Hallucination](../../docs/24-hallucination.md) | Yes | "Don't imagine" rules, RAG, relevance threshold, Telugu output check |
+| 25 | [Tokenization](../../docs/25-tokenization.md) | Yes | Character tokenizer (245 Telugu tokens); output-token limits on Gemini |
 
 How the topics connect inside the assistant:
 

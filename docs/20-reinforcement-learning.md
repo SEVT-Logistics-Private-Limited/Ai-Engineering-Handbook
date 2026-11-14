@@ -1,4 +1,4 @@
-# 25. Reinforcement Learning
+# 20. Reinforcement Learning
 
 > Reinforcement learning is a type of ML where an agent learns to make decisions by interacting with an environment and receiving rewards or penalties for its actions.
 
@@ -59,4 +59,4 @@ Reinforcement learning matters most in robotics, which connects to [VLA](10-vla.
 
 ---
 
-**Previous:** [← Semi-Supervised Learning](24-semi-supervised-learning.md) · [Home](../README.md) · **Next:** [DL →](17-dl.md)
+**Previous:** [← Semi-Supervised Learning](19-semi-supervised-learning.md) · [Home](../README.md) · **Next:** [DL →](21-dl.md)

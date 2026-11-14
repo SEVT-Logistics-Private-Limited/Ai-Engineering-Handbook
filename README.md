@@ -90,20 +90,20 @@ Computers cannot see pictures, only numbers. This section shows how an image is 
 | # | Topic | Summary | Topics inside |
 |---|---|---|---|
 | 16 | [ML](docs/16-ml.md) | Systems that learn patterns from data | AI vs ML · Rules vs learning from data · Types of ML (supervised, unsupervised, semi-supervised, reinforcement) |
-| 22 | [Supervised Learning](docs/22-supervised-learning.md) | Learns from inputs with known outputs: classification and regression | Inputs + known target outputs · House-price example · Classification · Regression |
-| 23 | [Unsupervised Learning](docs/23-unsupervised-learning.md) | Finds patterns in data without known outputs | No known target outputs · Customer-data example · Clustering · Anomaly detection · Supervised vs unsupervised |
-| 24 | [Semi-Supervised Learning](docs/24-semi-supervised-learning.md) | Learns from a little labelled data plus a lot of unlabelled data | Labelled vs unlabelled data · 1000-emails example · How labels spread to unlabelled data · Supervised vs semi-supervised vs unsupervised |
-| 25 | [Reinforcement Learning](docs/25-reinforcement-learning.md) | An agent learns decisions from rewards and penalties | Agent · Environment · Action · Reward and penalty · Bicycle example · The learning loop |
-| 17 | [DL](docs/17-dl.md) | Multi-layer neural networks; epochs, batches, training | Neural networks · Epoch · Batch · Batch size · The training loop |
-| 18 | [Transformers](docs/18-transformers.md) | The architecture behind LLMs: attention, Q/K/V, masking | Architecture · Embeddings · Encoder vs decoder · Self-attention · Query, Key, Value (Q/K/V) · Multi-head attention · Masking |
+| 17 | [Supervised Learning](docs/17-supervised-learning.md) | Learns from inputs with known outputs: classification and regression | Inputs + known target outputs · House-price example · Classification · Regression |
+| 18 | [Unsupervised Learning](docs/18-unsupervised-learning.md) | Finds patterns in data without known outputs | No known target outputs · Customer-data example · Clustering · Anomaly detection · Supervised vs unsupervised |
+| 19 | [Semi-Supervised Learning](docs/19-semi-supervised-learning.md) | Learns from a little labelled data plus a lot of unlabelled data | Labelled vs unlabelled data · 1000-emails example · How labels spread to unlabelled data · Supervised vs semi-supervised vs unsupervised |
+| 20 | [Reinforcement Learning](docs/20-reinforcement-learning.md) | An agent learns decisions from rewards and penalties | Agent · Environment · Action · Reward and penalty · Bicycle example · The learning loop |
+| 21 | [DL](docs/21-dl.md) | Multi-layer neural networks; epochs, batches, training | Neural networks · Epoch · Batch · Batch size · The training loop |
+| 22 | [Transformers](docs/22-transformers.md) | The architecture behind LLMs: attention, Q/K/V, masking | Architecture · Embeddings · Encoder vs decoder · Self-attention · Query, Key, Value (Q/K/V) · Multi-head attention · Masking |
 
 ### LLMs
 
 | # | Topic | Summary | Topics inside |
 |---|---|---|---|
-| 19 | [Prompt Engineering](docs/19-prompt-engineering.md) | Zero/one/few-shot, chain of thought, role prompting | Zero-shot · One-shot · Few-shot · Chain of thought · Role prompting |
-| 20 | [Hallucination](docs/20-hallucination.md) | When an LLM makes things up, and how to reduce it | What hallucination is · Why it happens · How to reduce it (RAG, prompts, validation, temperature, citations) |
-| 21 | [Tokenization](docs/21-tokenization.md) | Text → tokens → token IDs | Token · Tokenization · Token IDs · Why tokens matter (limits and cost) |
+| 23 | [Prompt Engineering](docs/23-prompt-engineering.md) | Zero/one/few-shot, chain of thought, role prompting | Zero-shot · One-shot · Few-shot · Chain of thought · Role prompting |
+| 24 | [Hallucination](docs/24-hallucination.md) | When an LLM makes things up, and how to reduce it | What hallucination is · Why it happens · How to reduce it (RAG, prompts, validation, temperature, citations) |
+| 25 | [Tokenization](docs/25-tokenization.md) | Text → tokens → token IDs | Token · Tokenization · Token IDs · Why tokens matter (limits and cost) |
 
 ## Featured project
 
@@ -138,7 +138,7 @@ User hears the answer
 
 ```text
 .
-├── docs/         25 topic pages
+├── docs/         25 topic pages, numbered in reading order
 ├── projects/     Telugu Voice AI Assistant write-up and screenshots
 ├── assets/       Images used in the topic pages
 └── ROADMAP.md    Covered and planned topics

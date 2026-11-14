@@ -1,4 +1,4 @@
-# 22. Supervised Learning
+# 17. Supervised Learning
 
 > In supervised learning, the training data contains inputs **and** their known target outputs. The model learns to map one to the other.
 
@@ -77,8 +77,8 @@ Supervised Learning
 
 **Not used directly.** We don't train a classic classifier or regression model.
 
-The closest idea is how our Telugu language models learn: they predict the **next character** in real Telugu text, and the actual next character is the known target. Because those targets come from the text itself rather than from people labelling data, this is called **self-supervised learning**, a close relative of supervised learning. See [DL](17-dl.md).
+The closest idea is how our Telugu language models learn: they predict the **next character** in real Telugu text, and the actual next character is the known target. Because those targets come from the text itself rather than from people labelling data, this is called **self-supervised learning**, a close relative of supervised learning. See [DL](21-dl.md).
 
 ---
 
-**Previous:** [← ML](16-ml.md) · [Home](../README.md) · **Next:** [Unsupervised Learning →](23-unsupervised-learning.md)
+**Previous:** [← ML](16-ml.md) · [Home](../README.md) · **Next:** [Unsupervised Learning →](18-unsupervised-learning.md)

@@ -1,4 +1,4 @@
-# 19. Prompt Engineering
+# 23. Prompt Engineering
 
 > Prompt engineering is the skill of writing the input (prompt) to an LLM so that it gives the answer you want.
 
@@ -22,7 +22,7 @@ The same LLM can give a vague answer or a precise one depending on **how you ask
 
 - Better prompts give better, more accurate answers.
 - It costs nothing: no training needed.
-- Good prompts help reduce [hallucination](20-hallucination.md).
+- Good prompts help reduce [hallucination](24-hallucination.md).
 
 ## How does it work?
 
@@ -76,4 +76,4 @@ Code: [`voice-assistant/api.py`](https://github.com/SEVT-Logistics-Private-Limit
 
 ---
 
-**Previous:** [← Transformers](18-transformers.md) · [Home](../README.md) · **Next:** [Hallucination →](20-hallucination.md)
+**Previous:** [← Transformers](22-transformers.md) · [Home](../README.md) · **Next:** [Hallucination →](24-hallucination.md)

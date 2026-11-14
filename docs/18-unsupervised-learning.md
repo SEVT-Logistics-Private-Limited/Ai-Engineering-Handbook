@@ -1,10 +1,10 @@
-# 23. Unsupervised Learning
+# 18. Unsupervised Learning
 
 > In unsupervised learning, the training data has **no** known target outputs. The algorithm tries to discover patterns on its own.
 
 ## Introduction
 
-In [Supervised Learning](22-supervised-learning.md), every example comes with the correct answer. Often, though, we only have raw data and no answers. Unsupervised learning is for that case.
+In [Supervised Learning](17-supervised-learning.md), every example comes with the correct answer. Often, though, we only have raw data and no answers. Unsupervised learning is for that case.
 
 ## What is it?
 
@@ -80,4 +80,4 @@ A related idea appears in our [RAG](13-rag.md) search: embeddings place text wit
 
 ---
 
-**Previous:** [← Supervised Learning](22-supervised-learning.md) · [Home](../README.md) · **Next:** [Semi-Supervised Learning →](24-semi-supervised-learning.md)
+**Previous:** [← Supervised Learning](17-supervised-learning.md) · [Home](../README.md) · **Next:** [Semi-Supervised Learning →](19-semi-supervised-learning.md)
