@@ -80,4 +80,4 @@ A related idea appears in our [RAG](13-rag.md) search: embeddings place text wit
 
 ---
 
-**Previous:** [← Supervised Learning](22-supervised-learning.md) · [Home](../README.md) · **Next:** [DL →](17-dl.md)
+**Previous:** [← Supervised Learning](22-supervised-learning.md) · [Home](../README.md) · **Next:** [Semi-Supervised Learning →](24-semi-supervised-learning.md)

@@ -105,7 +105,7 @@ See [Transformers](../../docs/18-transformers.md) and [Tokenization](../../docs/
 
 ## Topics covered in this project
 
-The project uses **13 of the 23 topics** in this handbook. Each topic page has an **"In our project"** section with the full details.
+The project uses **13 of the 25 topics** in this handbook. Each topic page has an **"In our project"** section with the full details.
 
 | # | Topic | Used? | How we used it |
 |---|---|---|---|
@@ -132,6 +132,8 @@ The project uses **13 of the 23 topics** in this handbook. Each topic page has a
 | 21 | [Tokenization](../../docs/21-tokenization.md) | Yes | Character tokenizer (245 Telugu tokens); output-token limits on Gemini |
 | 22 | [Supervised Learning](../../docs/22-supervised-learning.md) | Not directly | No classic classifier or regression model; our language models are self-supervised (predict the next character) |
 | 23 | [Unsupervised Learning](../../docs/23-unsupervised-learning.md) | Not yet | Not used yet |
+| 24 | [Semi-Supervised Learning](../../docs/24-semi-supervised-learning.md) | Not yet | Not used yet |
+| 25 | [Reinforcement Learning](../../docs/25-reinforcement-learning.md) | Not yet | Not used yet |
 
 How the topics connect inside the assistant:
 
