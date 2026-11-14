@@ -71,7 +71,7 @@ Computers cannot see pictures, only numbers. This section shows how an image is 
 
 | # | Topic | Summary |
 |---|---|---|
-| 8 | [NLP](docs/08-nlp.md) | AI that understands human language |
+| 8 | [NLP](docs/08-nlp.md) | Branch of AI that understands human language |
 | 9 | [VLM](docs/09-vlm.md) | Sees and understands (image + text) |
 | 10 | [VLA](docs/10-vla.md) | Sees, understands and acts |
 | 11 | [LLM](docs/11-llm.md) | Trained on huge text to understand and generate language |
