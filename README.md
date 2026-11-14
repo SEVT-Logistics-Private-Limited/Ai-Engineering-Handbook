@@ -4,8 +4,8 @@
 
 **A structured guide to AI engineering, from computer fundamentals to LLMs, RAG and robotics, applied in a live production project.**
 
-![Topics](https://img.shields.io/badge/topics-23-2563eb)
-![Applied in project](https://img.shields.io/badge/applied%20in%20project-13%20of%2023-16a34a)
+![Topics](https://img.shields.io/badge/topics-25-2563eb)
+![Applied in project](https://img.shields.io/badge/applied%20in%20project-13%20of%2025-16a34a)
 ![Deployed on](https://img.shields.io/badge/deployed%20on-Azure-0078d4)
 
 Yodha AI · SEVT Logistics Private Limited
@@ -22,8 +22,8 @@ Each topic is a short, consistent page: a clear explanation, a flow diagram, and
 
 | At a glance | Detail |
 |---|---|
-| **Topics** | 23, grouped into 6 areas |
-| **Applied in our project** | 13 of the 23 topics |
+| **Topics** | 25, grouped into 6 areas |
+| **Applied in our project** | 13 of the 25 topics |
 | **Page format** | Introduction · Definition · Rationale · Mechanism · Flow diagram · Use cases · Application in our project |
 | **Featured project** | [Telugu Voice AI Assistant](projects/telugu-voice-assistant/README.md), deployed on Azure Container Apps |
 | **Author** | Rishi Sasanala |
@@ -41,7 +41,7 @@ Language, vision and robotics  NLP → VLM → VLA → LLM → ROS
                                      ↓
 Tech stack                     RAG → API → FastAPI
                                      ↓
-Machine learning foundations   ML → Supervised → Unsupervised → DL → Transformers
+Machine learning foundations   ML → Supervised → Unsupervised → Semi-Supervised → Reinforcement → DL → Transformers
                                      ↓
 LLMs                           Prompt Engineering → Hallucination → Tokenization
 ```
@@ -89,9 +89,11 @@ Computers cannot see pictures, only numbers. This section shows how an image is 
 
 | # | Topic | Summary | Topics inside |
 |---|---|---|---|
-| 16 | [ML](docs/16-ml.md) | Systems that learn patterns from data | AI vs ML · Rules vs learning from data · Types of ML (supervised, unsupervised) |
+| 16 | [ML](docs/16-ml.md) | Systems that learn patterns from data | AI vs ML · Rules vs learning from data · Types of ML (supervised, unsupervised, semi-supervised, reinforcement) |
 | 22 | [Supervised Learning](docs/22-supervised-learning.md) | Learns from inputs with known outputs: classification and regression | Inputs + known target outputs · House-price example · Classification · Regression |
 | 23 | [Unsupervised Learning](docs/23-unsupervised-learning.md) | Finds patterns in data without known outputs | No known target outputs · Customer-data example · Clustering · Anomaly detection · Supervised vs unsupervised |
+| 24 | [Semi-Supervised Learning](docs/24-semi-supervised-learning.md) | Learns from a little labelled data plus a lot of unlabelled data | Labelled vs unlabelled data · 1000-emails example · How labels spread to unlabelled data · Supervised vs semi-supervised vs unsupervised |
+| 25 | [Reinforcement Learning](docs/25-reinforcement-learning.md) | An agent learns decisions from rewards and penalties | Agent · Environment · Action · Reward and penalty · Bicycle example · The learning loop |
 | 17 | [DL](docs/17-dl.md) | Multi-layer neural networks; epochs, batches, training | Neural networks · Epoch · Batch · Batch size · The training loop |
 | 18 | [Transformers](docs/18-transformers.md) | The architecture behind LLMs: attention, Q/K/V, masking | Architecture · Embeddings · Encoder vs decoder · Self-attention · Query, Key, Value (Q/K/V) · Multi-head attention · Masking |
 
@@ -136,7 +138,7 @@ User hears the answer
 
 ```text
 .
-├── docs/         23 topic pages
+├── docs/         25 topic pages
 ├── projects/     Telugu Voice AI Assistant write-up and screenshots
 ├── assets/       Images used in the topic pages
 └── ROADMAP.md    Covered and planned topics
